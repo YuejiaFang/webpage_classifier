@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Using a web browser is vital for doing various things online. Understand how to use a web browser in this free lesson." />
+<title>Internet Basics: Using a Web Browser</title>
+<meta property="og:title" content="Internet Basics: Using a Web Browser" />
+<meta property="og:description" content="Using a web browser is vital for doing various things online. Understand how to use a web browser in this free lesson." />
+<meta property="og:type" content="gcfglobal.lesson" />
+<meta property="og:image" content="https://media.gcflearnfree.org/global/layout/social/gcf-website-image.png" />
+<meta property="og:site_name" content="GCFGlobal.org" />
+<meta property="fb:admins" content="100002095670400" />
+<meta property="fb:page_id" content="198172680436" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="GCFGlobal.org" />
+<meta name="twitter:title" content="Internet Basics: Using a Web Browser" />
+<meta name="twitter:description" content="Using a web browser is vital for doing various things online. Understand how to use a web browser in this free lesson." />
+<meta name="twitter:url" content="https://edu.gcfglobal.org/en/internetbasics/using-a-web-browser/1/" />
+<link rel="preload" as="font" href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Kalam:400|Montserrat:100,200,300,500|Overpass:100,300,400,600,700,900?display=swap' type='text/css'>
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Kalam:400|Montserrat:100,200,300,500|Overpass:100,300,400,600,700,900?display=swap' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preload" as="style" href="/styles/deployment-en/lessonpage-en.concat.css"><link rel="stylesheet" href="/styles/deployment-en/lessonpage-en.concat.css">
+<script defer src="/scripts/deployment-en/lessonpage-en.concat.js" type="text/javascript"></script>
+<link href="https://edu.gcfglobal.org/en/internetbasics/using-a-web-browser/1/" rel="canonical" />
+</head>
+<body>
+<div class="header-wrapper">
+<header>
+<div id="page-header" class="desktop-header">
+<div class="primary-header">
+<div id="subjects-search">
+<div id="subjects-search-box">
+<div class="topnav-sls-container">
+<a aria-label="GCFGlobal homepage" class="logo-link" href="/en/">
+<img class="logo logo-left main-logo-en" src="https://media.gcflearnfree.org/global/gcfglobal-color.png" alt="GCFGlobal Logo">
+<img class="logo logo-middle logo-en" src="https://media.gcflearnfree.org/assets/logo/logo.png" alt="GCFLearnFree Logo">
+</a>
+<form id="smallSearchbar" action="/en/search/" onSubmit="showSearchSpinner()">
+<span class="form-content-container">
+<input class="topnav-search-field-small" pattern=".{1,}" required type="text" name="q" placeholder="What can we teach you?" title="Search bar">
+<button class="search-submit-btn-small search-close-btn" type="button" aria-label="close search bar">
+<i onClick="showSearchBar('close')" class="material-icons close-search-x">close</i>
+</button>
+<button class="search-submit-btn-small" type="submit" aria-label="search button">
+<i onClick="showSearchBar('close')" class="material-icons">search</i>
+</button>
+<img class="search-submit-spinner left-spinner" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/transparent-loading-spinner.gif" alt="">
+</span>
+</form>
+</div>
+</div>
+<div class="topnav-rightbox">
+<button onClick="showSearchBar('open')" class="header-btn header-search-btn" aria-label="open search bar">
+<i class="material-icons">search</i>
+</button>
+<button id="acc-nav-button" class="subjects-select" onclick="toggleSubjectsDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="acc-nav-menu">
+<i class="dropdown-hamburger material-icons" aria-hidden="true">menu</i>
+<p>Topics</p>
+</button>
+<div id="acc-nav-menu" class="dropdown-wrapper" aria-labelledby="acc-nav-button">
+<button class="dropdown-close-x" onclick="toggleSubjectsDropdown()">
+<i class="material-icons">close</i>
+</button>
+<div class="dropdown-inner site-nav subjectMenuOption selectedMenuOption">
+<ul class="site-nav-contents site-nav">
+<li class="supercollection">
+<a href="/en/subjects/i-want-to/">I want to...</a>
+<ul class="level-1">
+<li>
+<a href="/en/computerbasics/">Get started with computers</a>
+</li>
+<li>
+<a href="/en/subjects/office/">Learn Microsoft Office</a>
+</li>
+<li>
+<a href="/en/topics/applying-for-jobs/">Apply for a job</a>
+</li>
+<li>
+<a href="/en/topics/workplaceskills/">Improve my work skills</a>
+</li>
+<li>
+<a href="/en/beginning-graphic-design/">Design nice-looking docs</a>
+</li>
+<li>
+<a href="/en/subjects/i-want-to/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/subjects/microsoft-office/">Microsoft</a>
+<ul class="level-1">
+<li class="multiple-links">
+<a href="/en/topics/office/">Office 2019</a> |
+<a href="/en/topics/office2016/">2016</a> |
+<a href="/en/topics/office2013/">2013</a>
+</li>
+<li>
+<a href="/en/topics/word/">Word</a>
+</li>
+<li>
+<a href="/en/topics/excel/">Excel</a>
+</li>
+<li>
+<a href="/en/topics/powerpoint/">PowerPoint</a>
+</li>
+<li>
+<a href="/en/topics/access/">Access</a>
+</li>
+<li>
+<a href="/en/excelformulas/">Excel Formulas</a>
+</li>
+<li>
+<a href="/en/subjects/microsoft-office/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/subjects/basic-skills/">Basic Skills</a>
+<ul class="level-1">
+<li>
+<a href="/en/topics/computers/">Computers</a>
+</li>
+<li>
+<a href="/en/topics/smartphonesandtablets/">Smartphones & Tablets</a>
+</li>
+<li>
+<a href="/en/typing/">Typing Tutorial</a>
+</li>
+<li>
+<a href="/en/windowsbasics/">Windows</a>
+</li>
+<li>
+<a href="/en/subjects/basic-skills/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/subjects/internet-skills/">Internet Skills</a>
+<ul class="level-1">
+<li>
+<a href="/en/topics/internet/">Internet</a>
+</li>
+<li>
+<a href="/en/topics/onlinesafety/">Online Safety</a>
+</li>
+<li>
+<a href="/en/topics/socialmedia/">Social Media</a>
+</li>
+<li>
+<a href="/en/topics/emailbasics/">Email</a>
+</li>
+<li>
+<a href="/en/search-better-2018/">Search Better</a>
+</li>
+<li>
+<a href="/en/subjects/internet-skills/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/topics/googleapps/">Google</a>
+<ul class="level-1">
+<li>
+<a href="/en/gmail/">Gmail</a>
+</li>
+<li>
+<a href="/en/googledocuments/">Google Docs</a>
+</li>
+<li>
+<a href="/en/googlespreadsheets/">Google Sheets</a>
+</li>
+<li>
+<a href="/en/topics/googleapps/">More...</a>
+ </li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/subjects/work/">Work &amp; Career</a>
+<ul class="level-1">
+<li>
+<a href="/en/topics/careerplanning/">Career Planning</a>
+</li>
+<li>
+<a href="/en/resumewriting/">Resume Writing</a>
+</li>
+<li>
+<a href="/en/coverletters/">Cover Letters</a>
+</li>
+<li>
+<a href="/en/jobsearchandnetworking/">Job Search and Networking</a>
+</li>
+<li>
+<a href="/en/business-communication/">Business Communication</a>
+</li>
+<li>
+<a href="/en/subjects/work/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/topics/present-day-skills/">Skills for Today</a>
+<ul class="level-1">
+<li>
+<a href="/en/adapting-to-change/">Adapting to Change</a>
+</li>
+<li>
+<a href="/en/thenow/what-is-3d-printing/1/">3D Printing</a>
+</li>
+<li>
+<a href="/en/wearables/">Wearables</a>
+</li>
+<li>
+<a href="/en/freelance-work/">Freelance Work</a>
+</li>
+<li>
+<a href="/en/topics/personal-finance/">Personal Finance</a>
+</li>
+<li>
+<a href="/en/sharingeconomy/">Sharing Economy</a>
+</li>
+<li>
+<a href="/en/problem-solving-and-decision-making/">Decision-Making</a>
+</li>
+<li>
+<a href="/en/topics/present-day-skills/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/topics/creativity-and-design/">Creativity &amp; Design</a>
+<ul class="level-1">
+<li>
+<a href="/en/beginning-graphic-design/">Graphic Design</a>
+</li>
+<li>
+<a href="/en/creativity/">Creativity</a>
+</li>
+<li>
+<a href="/en/digitalphotography/">Photography</a>
+</li>
+<li>
+<a href="/en/imageediting101/">Image Editing</a>
+</li>
+<li>
+<a href="/en/photoshopbasics/">Photoshop</a>
+</li>
+<li>
+<a href="/en/topics/creativity-and-design/">More...</a>
+</li>
+</ul>
+</li>
+<li class="supercollection">
+<a href="/en/subjects/core-skills/">Core Skills</a>
+<ul class="level-1">
+<li>
+<a href="/en/topics/math/">Math</a>
+</li>
+<li>
+<a href="/en/topics/reading/">Reading</a>
+</li>
+<li>
+<a href="/en/grammar/">Grammar</a>
+</li>
+<li>
+<a href="/en/subjects/language-learning/">Language Learning</a>
+</li>
+<li>
+<a href="/en/subjects/core-skills/">More...</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="dropdown-contents level-1 bottom-row">
+<li><a href="/en/gcfteacherguides/">For Educators</a></li>
+<li><a href="/en/subjects/global/">Translations</a></li>
+<li><a href="/en/topics/staff-picks/">Staff Picks</a></li>
+<li><a href="/en/topics/">All Topics</a></li>
+</ul>
+</div>
+</div>
+<a onclick="window.print()" class="print-button header-btn header-print-link">
+<i class="material-icons">print</i>
+</a>
+<div class="topnav-language">
+<div class="language-dropdown">
+<button onclick="toggleLanguageMenu()" aria-label="Change Language" aria-haspopup="true" aria-expanded="false" aria-controls="acc-language-menu" id="acc-language-button" class="language-dropdown-button">
+English
+<i class="material-icons more" aria-hidden="true">expand_more</i>
+<i class="material-icons less" aria-hidden="true">expand_less</i>
+</button>
+<ul id="acc-language-menu" class="language-dropdown-menu" aria-labelledby="acc-language-button">
+<li>
+<a onclick="event.preventDefault(); toggleLanguageMenu()" href="/en/">
+English
+<i class="material-icons more" aria-hidden="true">expand_more</i>
+<i class="material-icons less" aria-hidden="true">expand_less</i>
+</a>
+</li>
+<li>
+<a href="/es/">
+Español
+</a>
+</li>
+<li>
+<a href="/pt/">
+Português
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div style="display: inline-block; padding-right: 12px;"><img style="width: 34px; margin-bottom: 25px; margin-right: 1em;" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/goodwill-image.png" alt="Goodwill Logo"></div>
+</div>
+</div>
+</div>
+
+<div class="sub-header">
+<div id="corner-gradient-left"></div>
+<div id="corner-gradient-right"></div>
+<div class="headerfooter-content-wrapper">
+<div id="subheaderContentContainer">
+<div class="header-nodesc en">
+
+<div class="title-content">
+<h1><a class="current-tutorial-title" href="/en/internetbasics/">Internet Basics</a>&nbsp;-</h1>
+<h2><span id="current-lesson-title">Using a Web Browser</span></h2>
+</div>
+<a class="header-tutorial-link" href="/en/internetbasics/">Back to Tutorial</a>
+</div>
+<img id="header-img" class="header-image" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/city-aqua2.svg" alt="">
+</div>
+</div>
+</div>
+</div>
+<div class="print-header">
+<div class="print-header-wrapper">
+<header>
+<div class="desktop-header">
+<h1>
+<div class="print-first-title">Internet Basics</div>
+<div class="print-second-title">Using a Web Browser</div>
+</h1>
+<img class="logo" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/gcfglobal-logo-dark.svg" alt="GCFLearnFree.org" />
+</div>
+</header>
+</div>
+</div>
+<div class="mobile-header">
+<div id="page-top">
+<a data-route="home" class="home-link" href="/">
+
+<img class="homeicon en" src="https://media.gcflearnfree.org/global/gcfglobal-color.png" alt="GCFGlobal Logo">
+</a>
+<i onclick="toggleSearchCollapse()" class="material-icons menu-icon menu-icon-left">search</i>
+<i onclick="toggleNavCollapse()" class="material-icons menu-icon menu-icon-right">menu</i>
+<div style="position: absolute; top: 9px; right: 8px;"><img style="width: 23px; margin-top: 2px; margin-right: 4px;" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/goodwill-image.png" alt="Goodwill Logo"></div>
+</div>
+<div id="navcollapse">
+<div class="navcollapsecontent">
+<a href="/en/topics/">All Topics</a>
+<a href="/en/account/signin/">My Account</a>
+<a href="/en/info/who-we-are/1/">About Us</a>
+<a href="https://support.gcflearnfree.org/">FAQ</a>
+<a href="/en/info/contact-us/1/">Contact Us</a>
+<div class="language-picker">
+<a href="/en/">EN</a>
+<a href="/es/">ES</a>
+<a href="/pt/">PT</a>
+</div>
+</div>
+</div>
+<div class="search-control">
+<div class="search-container">
+<div class="search-inner-container">
+<a class="mobile-back-to-tutorial" href="/en/internetbasics/">
+<span class="no-break"><i class="material-icons">navigate_before</i> Tutorial</span>
+</a>
+<form id="gcfsearch" method="get" action="/en/search/" onSubmit="showSearchSpinner()">
+<button type="submit" aria-label="search button"><i class="material-icons">search</i></button>
+<div class="mobile-search-input-wrapper">
+<input id="request" class="searchinput" pattern=".{1,}" required type="text" name="q" name="q" size="21" maxlength="120" placeholder="What can we teach you?" autocomplete="off" title="Search bar">
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div id="background">
+<div class="mobile-lesson-title">
+<h1>Internet Basics: Using a Web Browser</h1>
+</div>
+<div id="page-wrapper">
+<div id="content-area">
+<span style="display:none;" id="playlist-id">55e879102c9aff7420c71225</span>
+<span style="display:none;" id="lesson-id">572256e0dba9160e5c387caa</span>
+<div>
+<div class="text-plus-page content-item">
+<div id="lessoncontent">
+<div id="/en/internetbasics/using-a-web-browser/1/" class="lesson-block lesson imgBoxShadow" data-title="Using a Web Browser">
+<div id="first-divider" class="divider-box">
+<div class="infinite-scroll-divider"></div>
+<h4 tabindex="0" aria-label="Lesson Divider Lesson 5: Using a Web Browser">Lesson 5: Using a Web Browser</h4>
+</div>
+<p class="scroll-trigger-top">/en/internetbasics/understanding-the-cloud/content/</p>
+<h3>Using a web browser</h3>
+<p>A <strong>web browser</strong> is a type of software that allows you to find and view websites on the Internet. Even if you didn&apos;t know it, you&apos;re using a web browser right now to read this page! There are many different web browsers, but some of the most common ones include <strong>Google Chrome</strong>, <strong>Internet Explorer</strong>, <strong>Safari</strong>, <strong>Microsoft Edge</strong>, and <strong>Mozilla Firefox</strong>.</p>
+<p>No matter which web browser you use, you&apos;ll want to learn the basics of browsing the Web. In this lesson, we&apos;ll talk about <strong>navigating</strong> to different websites, <strong>using tabbed</strong> <strong>browsing</strong>, creating <strong>bookmarks</strong>, and more.</p>
+<p class="chevron">Watch the video below to learn the basics of using a web browser.</p>
+<div class="video-embed"><iframe style="width: 853px; height: 480px;" src="https://www.youtube.com/embed/FxirRVJWUTs?rel=0&amp;showinfo=0" allowfullscreen frameborder="0"></iframe></div>
+<p class="moreInfo">We&apos;ll be using the <strong>Google Chrome web browser</strong> throughout this lesson, but you can use any browser you want. Keep in mind that your browser may look and act a bit differently, but all web browsers work in basically the same way. <br></p>
+<h4>URLs and the address bar</h4>
+<p>Each website has a unique address, called a <strong>URL</strong> (short for <strong>Uniform Resource Locator</strong>). It&apos;s like a street address that tells your browser where to go on the Internet. When you type a URL into the browser&apos;s <strong>address bar</strong> and press <strong>Enter </strong>on your keyboard, the browser will load the page associated with that URL.</p>
+<p>In the example below, we&apos;ve typed <strong><a target="_blank" href="http://www.bbc.com/travel">www.bbc.com/travel</a> </strong>into the address bar.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_url.jpg" alt="The address bar" title="The address bar"></div>
+<h4>Links</h4>
+<p>Whenever you see a word or phrase on a website that&apos;s<strong> blue </strong>or<strong> underlined in blue</strong>, it&apos;s probably a <strong>hyperlink</strong>, or <strong>link</strong> for short. You might already know how links work, even if you&apos;ve never thought about them much before. For example, try clicking the link below.</p>
+<p><a target="_blank" href="http://www.google.com"><u>Hey, I&apos;m a link! Click me!</u></a></p>
+<p>Links are used to <strong>navigate the Web</strong>. When you click a link, it will usually take you to a different webpage. You may also notice that your cursor changes into a<strong> hand icon</strong> whenever you hover over a link.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_hand_icon.jpg" alt="Clicking a link" title="Clicking a link"></div>
+<p>If you see this icon, it means you&apos;ve found a link. You&apos;ll find other types of links this way too. For example, many websites actually use <strong>images</strong> as links, so you can just <strong>click the image</strong> to navigate to another page.</p>
+<p class="moreInfo">Review our lesson on <a href="https://edu.gcfglobal.org/en/internetbasics/understanding-hyperlinks/1/" target="_blank">Understanding Hyperlinks</a> to learn more.<br></p>
+<h4>Navigation buttons</h4>
+<p>The <strong>Back</strong> and <strong>Forward</strong> buttons allow you to move through websites you&apos;ve <strong>recently viewed</strong>. You can also click and hold either button to see your recent history.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_back_forward.jpg" alt="Back and forward buttons" title="Back and forward buttons"></div>
+<p>The <strong>Refresh</strong> button will <strong>reload </strong>the current page. If a website stops working, try using the Refresh button.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_reload.jpg" alt="The refresh button" title="The refresh button"></div>
+<h4>Tabbed browsing</h4>
+<p>Many browsers allow you to open links in a new <strong>tab</strong>. You can open as many links as you want, and they&apos;ll stay in the <strong>same browser window</strong> instead of cluttering your screen with multiple windows.</p>
+<p>To open a link in a new tab, <strong>right-click</strong> the link and select <strong>Open link in new tab</strong> (the exact wording may vary from browser to browser).</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_link_tab.jpg" alt="Opening a link in a new tab" title="Opening a link in a new tab"></div>
+<p>To <strong>close</strong> a tab, click the <strong>X</strong>.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_close_tab.jpg" alt="Closing a tab" title="Closing a tab"></div>
+<p>To create a <strong>new blank tab</strong>, click the button to the right of any open tabs.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_new_tab.jpg" alt="Opening a new tab" title="Opening a new tab"></div>
+<h4>Bookmarks and history</h4>
+<p>If you find a website you want to view later, it can be hard to memorize the exact web address. <strong>Bookmarks</strong>, also known as <strong>favorites</strong>, are a great way to save and organize specific websites so you can revisit them again and again. Simply locate and select the <strong>Star</strong> icon to bookmark the current website.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_bookmark.jpg" style="width: 617px; height: 513.433px;" alt="Bookmarking a web page" title="Bookmarking a web page" width="617" height="513.433"></div>
+<p>Your browser will also keep a history of every site you visit. This is another good way to find a site you visited previously. To view your history, open your browser settings&#x2014;usually by clicking the icon in the upper-right corner&#x2014;and select <strong>History</strong>.</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_history.jpg" alt="Viewing browsing history" title="Viewing browsing history"></div>
+<p><br></p>
+<h4>Downloading files</h4>
+<p>Links don&apos;t always go to another website. In some cases, they point to a <strong>file</strong> that can be <strong>downloaded</strong>, or saved, to your computer.</p>
+<p>If you click a link to a file, it may download automatically, but sometimes it just <strong>opens within your browser</strong> instead of downloading.<span class="redactor-invisible-space"></span> To prevent it from opening in the browser, you can <strong>right-click</strong> the link and select <strong>Save link as</strong> (different browsers may use slightly different wording, like <strong>Save target as</strong>).</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_save_link.jpg" alt="Saving a link" title="Saving a link"></div>
+<p class="moreInfo">Review our lesson on <a href="http://www.gcflearnfree.org/internetbasics/downloading-and-uploading/1">Downloading and Uploading</a> to learn more.<br></p>
+<h4>Saving images</h4>
+<p>Sometimes you may want to save an image from a website to your computer. To do this, right-click the image and select <strong>Save image as</strong> (or <strong>Save picture as</strong>).</p>
+<div><img src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/browser_save_image.jpg" alt="Saving an image" title="Saving an image"></div>
+<h4>Plug-ins</h4>
+<p><strong>Plug-ins</strong> are small applications that allow you to view certain types of content within your web browser. For example, <strong>Adobe Flash</strong> and <strong>Microsoft Silverlight</strong> are sometimes used to play videos, while <strong>Adobe Reader</strong> is used to view PDF files.</p>
+<p> If you don&apos;t have the correct plug-in for a website, your browser will usually provide a link to download it. There may also be times when you need to <strong>update</strong> your plug-ins. Review our lesson on <a href="http://www.gcflearnfree.org/internet-tips/installing-and-updating-browser-plugins/1/">Installing and Updating Plug-ins</a> to learn more.</p>
+<div class="centerImage"><img longdesc="" alt="plug-in warning" src="https://media.gcflearnfree.org/content/572256e0dba9160e5c387caa_04_28_2016/update_web.png"></div>
+<div class="infinite-nav ">
+
+<a role="button" tabindex="0" aria-label="Next Lesson" onMouseEnter="$(this).find('img').attr('src', 'https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/outline-arrow_downward-hover.svg')" onMouseLeave="$(this).find('img').attr('src', 'https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/outline-arrow_downward.svg')" class="linkblue-button nextLoadMore" onclick="infiniteScroll.getNextLesson('55e879102c9aff7420c71225', '55772743317fac09284750f6')" onkeydown="infiniteScroll.keyNextLesson(event, '55e879102c9aff7420c71225', '55772743317fac09284750f6')">
+
+<img class="continue-arrow" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/outline-arrow_downward.svg" alt="" /><span>Continue</span>
+</a>
+</div>
+<div class="fullpage-nav">
+<div class="full-page-divider"></div>
+<div class="previous">
+<div class="arrow-box">
+<img id="prev" src="https://media.gcflearnfree.org/assets/icons/textplus/bottom-nav-left-arrows.png" alt="previous">
+</div>
+ <a href="/en/internetbasics/understanding-the-cloud/1/">Previous: Understanding the Cloud</a>
+</div>
+<div class="next">
+<a href="/en/internetbasics/understanding-hyperlinks/1/">
+<span>Next:</span><span>Understanding Hyperlinks</span>
+</a>
+<div class="arrow-box">
+<img id="next" src="https://media.gcflearnfree.org/assets/icons/textplus/bottom-nav-right-arrows.png" alt="next">
+</div>
+</div>
+</div>
+<p class="scroll-trigger">/en/internetbasics/understanding-hyperlinks/content/</p>
+</div>
+</div> 
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div id="edlActivityModal" class="overlay-content overlay-body modal"></div>
+</div>
+</div>
+<footer class="footer">
+<div class="desktopfooter">
+<div class="main-footer">
+<div class="footer-drag-handle" onclick="toggleFooter()">
+<i class="up-arrow material-icons">keyboard_arrow_up</i>
+<i class="down-arrow material-icons">keyboard_arrow_down</i>
+</div>
+
+<div id="footerContent">
+<div>
+<div class="footer-links-container">
+<div id="sectionOne" class="text-links">
+<h4 class="footerheaders">About Us</h4>
+<a href="/en/info/who-we-are/1/">Who We Are</a><br />
+<a href="/en/info/meet-the-staff/1/">Meet the Staff</a><br />
+<a href="https://www.fundaciongcfaprendelibre.org/careers/" target="_blank">Work With Us</a><br />
+<a href="/en/info/who-uses-us-our-partners/1/">Who Uses Us + Our Partners</a><br />
+</div>
+<div id="sectionTwo" class="text-links">
+<h4 class="footerheaders">Educators' Resources</h4>
+<a href="/en/gcfteacherguides/">Teacher Guides</a><br />
+<a href="/en/info/resources-and-tools/1/">Resources and Tools</a><br />
+</div>
+<div id="sectionThree" class="text-links">
+<h4 class="footerheaders">Help and Support</h4>
+<a href="https://support.gcflearnfree.org" target="_blank">FAQ</a><br />
+<a href="/en/info/terms-of-use/1/">Terms of Use</a><br />
+<a href="/en/info/contact-us/1/">Contact Us</a>
+<br><a href="/en/account/user/">My Account</a><br />
+</div>
+</div>
+<div class="footer-logo-box">
+<div id="footer_social_media">
+<a href="https://www.facebook.com/GCFLearnFree.org" target="_blank">
+<img id="fb_link" class="footer_social_media_link" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/social/facebook_icon.svg" alt="facebook" />
+</a>
+<a href="https://twitter.com/GCFLearnFree" target="_blank">
+<img id="twitter_link" class="footer_social_media_link" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/social/twitter_icon.svg" alt="twitter" />
+</a>
+<a href="https://www.youtube.com/user/gcflearnfree" target="_blank">
+<img id="youtube_link" class="footer_social_media_link" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/social/youtube_icon.svg" alt="youtube" />
+</a>
+<a href="https://pinterest.com/gcflearnfree/" target="_blank">
+<img id="pinterest" class="footer_social_media_link" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/social/pinterest_icon.svg" alt="pinterest" />
+</a>
+<a href="https://www.instagram.com/gcf_learnfree/" target="_blank">
+<img class="footer_social_media_link" src="https://media.gcflearnfree.org/assets/edu-gcfglobal-site/images/social/instagram_icon.svg" alt="instagram" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-wrapper">
+<p id="copyright">&copy;1998-2021 Goodwill Community Foundation, Inc. All rights reserved.</p>
+</div>
+</div>
+
+</footer>
+</body>
+</html>

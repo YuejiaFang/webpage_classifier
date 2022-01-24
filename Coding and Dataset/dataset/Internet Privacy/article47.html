@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="hGuHd6qgal39ioYGM4RAdzr0KUPaX5zFmiiPTBDW">
+
+                        <meta name="robots" content="index, follow">
+                    <title>What Is Online Privacy and Why Does It Matter | Clario Stream</title>
+            <meta name="description" content="Online privacy is one of the defining issues of our time. Here’s a guide to what it is and why it matters to you. ">
+
+        <link href="https://clario.co/blog/what-is-online-privacy/" rel="canonical"/>
+
+            <meta property="og:title" content=" What Is Online Privacy? This Is Your Human Right">
+            <meta property="og:description" content="Online privacy is one of the defining issues of our time. Here’s a guide to what it is and why it matters to you. ">
+            <meta property="og:url" content="https://clario.co/blog/what-is-online-privacy">
+            <meta property="og:type" content="article">
+        
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+            
+
+        <link rel="shortcut icon" type="image/x-icon" sizes="48x48" href="https://static-cdn.clario.co/blog/images/favicons/favicon.ico" >
+        <link rel="icon" type="image/png" sizes="16x16" href="https://static-cdn.clario.co/blog/images/favicons/16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://static-cdn.clario.co/blog/images/favicons/32x32.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="https://static-cdn.clario.co/blog/images/favicons/64x64.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="https://static-cdn.clario.co/blog/images/favicons/128x128.png">
+        <link rel="icon" type="image/png" sizes="196x196" href="https://static-cdn.clario.co/blog/images/favicons/196x196.png">
+
+        <!-- iOS & other mobile devices -->
+        <link rel="apple-touch-icon" href="https://static-cdn.clario.co/blog/favicons/76x76.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://static-cdn.clario.co/blog/images/favicons/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://static-cdn.clario.co/blog/images/favicons/120x120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://static-cdn.clario.co/blog/images/favicons/152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="https://static-cdn.clario.co/blog/images/favicons/167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://static-cdn.clario.co/blog/images/favicons/180x180.png">
+
+        <script>!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:o})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=374)}({100:function(e,t){function n(e){return!!e.constructor&&"function"==typeof e.constructor.isBuffer&&e.constructor.isBuffer(e)}e.exports=function(e){return null!=e&&(n(e)||function(e){return"function"==typeof e.readFloatLE&&"function"==typeof e.slice&&n(e.slice(0,0))}(e)||!!e._isBuffer)}},101:function(e,t,n){"use strict";var o=n(43),r=n(5),i=n(111),a=n(112);function s(e){this.defaults=e,this.interceptors={request:new i,response:new i}}s.prototype.request=function(e){"string"==typeof e&&(e=r.merge({url:arguments[0]},arguments[1])),(e=r.merge(o,{method:"get"},this.defaults,e)).method=e.method.toLowerCase();var t=[a,void 0],n=Promise.resolve(e);for(this.interceptors.request.forEach(function(e){t.unshift(e.fulfilled,e.rejected)}),this.interceptors.response.forEach(function(e){t.push(e.fulfilled,e.rejected)});t.length;)n=n.then(t.shift(),t.shift());return n},r.forEach(["delete","get","head","options"],function(e){s.prototype[e]=function(t,n){return this.request(r.merge(n||{},{method:e,url:t}))}}),r.forEach(["post","put","patch"],function(e){s.prototype[e]=function(t,n,o){return this.request(r.merge(o||{},{method:e,url:t,data:n}))}}),e.exports=s},102:function(e,t){var n,o,r=e.exports={};function i(){throw new Error("setTimeout has not been defined")}function a(){throw new Error("clearTimeout has not been defined")}function s(e){if(n===setTimeout)return setTimeout(e,0);if((n===i||!n)&&setTimeout)return n=setTimeout,setTimeout(e,0);try{return n(e,0)}catch(t){try{return n.call(null,e,0)}catch(t){return n.call(this,e,0)}}}!function(){try{n="function"==typeof setTimeout?setTimeout:i}catch(e){n=i}try{o="function"==typeof clearTimeout?clearTimeout:a}catch(e){o=a}}();var u,c=[],l=!1,d=-1;function f(){l&&u&&(l=!1,u.length?c=u.concat(c):d=-1,c.length&&p())}function p(){if(!l){var e=s(f);l=!0;for(var t=c.length;t;){for(u=c,c=[];++d<t;)u&&u[d].run();d=-1,t=c.length}u=null,l=!1,function(e){if(o===clearTimeout)return clearTimeout(e);if((o===a||!o)&&clearTimeout)return o=clearTimeout,clearTimeout(e);try{o(e)}catch(t){try{return o.call(null,e)}catch(t){return o.call(this,e)}}}(e)}}function h(e,t){this.fun=e,this.array=t}function v(){}r.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)t[n-1]=arguments[n];c.push(new h(e,t)),1!==c.length||l||s(p)},h.prototype.run=function(){this.fun.apply(null,this.array)},r.title="browser",r.browser=!0,r.env={},r.argv=[],r.version="",r.versions={},r.on=v,r.addListener=v,r.once=v,r.off=v,r.removeListener=v,r.removeAllListeners=v,r.emit=v,r.prependListener=v,r.prependOnceListener=v,r.listeners=function(e){return[]},r.binding=function(e){throw new Error("process.binding is not supported")},r.cwd=function(){return"/"},r.chdir=function(e){throw new Error("process.chdir is not supported")},r.umask=function(){return 0}},103:function(e,t,n){"use strict";var o=n(5);e.exports=function(e,t){o.forEach(e,function(n,o){o!==t&&o.toUpperCase()===t.toUpperCase()&&(e[t]=n,delete e[o])})}},104:function(e,t,n){"use strict";var o=n(56);e.exports=function(e,t,n){var r=n.config.validateStatus;n.status&&r&&!r(n.status)?t(o("Request failed with status code "+n.status,n.config,null,n.request,n)):e(n)}},105:function(e,t,n){"use strict";e.exports=function(e,t,n,o,r){return e.config=t,n&&(e.code=n),e.request=o,e.response=r,e}},106:function(e,t,n){"use strict";var o=n(5);function r(e){return encodeURIComponent(e).replace(/%40/gi,"@").replace(/%3A/gi,":").replace(/%24/g,"$").replace(/%2C/gi,",").replace(/%20/g,"+").replace(/%5B/gi,"[").replace(/%5D/gi,"]")}e.exports=function(e,t,n){if(!t)return e;var i;if(n)i=n(t);else if(o.isURLSearchParams(t))i=t.toString();else{var a=[];o.forEach(t,function(e,t){null!==e&&void 0!==e&&(o.isArray(e)?t+="[]":e=[e],o.forEach(e,function(e){o.isDate(e)?e=e.toISOString():o.isObject(e)&&(e=JSON.stringify(e)),a.push(r(t)+"="+r(e))}))}),i=a.join("&")}return i&&(e+=(-1===e.indexOf("?")?"?":"&")+i),e}},107:function(e,t,n){"use strict";var o=n(5),r=["age","authorization","content-length","content-type","etag","expires","from","host","if-modified-since","if-unmodified-since","last-modified","location","max-forwards","proxy-authorization","referer","retry-after","user-agent"];e.exports=function(e){var t,n,i,a={};return e?(o.forEach(e.split("\n"),function(e){if(i=e.indexOf(":"),t=o.trim(e.substr(0,i)).toLowerCase(),n=o.trim(e.substr(i+1)),t){if(a[t]&&r.indexOf(t)>=0)return;a[t]="set-cookie"===t?(a[t]?a[t]:[]).concat([n]):a[t]?a[t]+", "+n:n}}),a):a}},108:function(e,t,n){"use strict";var o=n(5);e.exports=o.isStandardBrowserEnv()?function(){var e,t=/(msie|trident)/i.test(navigator.userAgent),n=document.createElement("a");function r(e){var o=e;return t&&(n.setAttribute("href",o),o=n.href),n.setAttribute("href",o),{href:n.href,protocol:n.protocol?n.protocol.replace(/:$/,""):"",host:n.host,search:n.search?n.search.replace(/^\?/,""):"",hash:n.hash?n.hash.replace(/^#/,""):"",hostname:n.hostname,port:n.port,pathname:"/"===n.pathname.charAt(0)?n.pathname:"/"+n.pathname}}return e=r(window.location.href),function(t){var n=o.isString(t)?r(t):t;return n.protocol===e.protocol&&n.host===e.host}}():function(){return!0}},109:function(e,t,n){"use strict";var o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";function r(){this.message="String contains an invalid character"}r.prototype=new Error,r.prototype.code=5,r.prototype.name="InvalidCharacterError",e.exports=function(e){for(var t,n,i=String(e),a="",s=0,u=o;i.charAt(0|s)||(u="=",s%1);a+=u.charAt(63&t>>8-s%1*8)){if((n=i.charCodeAt(s+=.75))>255)throw new r;t=t<<8|n}return a}},110:function(e,t,n){"use strict";var o=n(5);e.exports=o.isStandardBrowserEnv()?{write:function(e,t,n,r,i,a){var s=[];s.push(e+"="+encodeURIComponent(t)),o.isNumber(n)&&s.push("expires="+new Date(n).toGMTString()),o.isString(r)&&s.push("path="+r),o.isString(i)&&s.push("domain="+i),!0===a&&s.push("secure"),document.cookie=s.join("; ")},read:function(e){var t=document.cookie.match(new RegExp("(^|;\\s*)("+e+")=([^;]*)"));return t?decodeURIComponent(t[3]):null},remove:function(e){this.write(e,"",Date.now()-864e5)}}:{write:function(){},read:function(){return null},remove:function(){}}},111:function(e,t,n){"use strict";var o=n(5);function r(){this.handlers=[]}r.prototype.use=function(e,t){return this.handlers.push({fulfilled:e,rejected:t}),this.handlers.length-1},r.prototype.eject=function(e){this.handlers[e]&&(this.handlers[e]=null)},r.prototype.forEach=function(e){o.forEach(this.handlers,function(t){null!==t&&e(t)})},e.exports=r},112:function(e,t,n){"use strict";var o=n(5),r=n(113),i=n(57),a=n(43),s=n(114),u=n(115);function c(e){e.cancelToken&&e.cancelToken.throwIfRequested()}e.exports=function(e){return c(e),e.baseURL&&!s(e.url)&&(e.url=u(e.baseURL,e.url)),e.headers=e.headers||{},e.data=r(e.data,e.headers,e.transformRequest),e.headers=o.merge(e.headers.common||{},e.headers[e.method]||{},e.headers||{}),o.forEach(["delete","get","head","post","put","patch","common"],function(t){delete e.headers[t]}),(e.adapter||a.adapter)(e).then(function(t){return c(e),t.data=r(t.data,t.headers,e.transformResponse),t},function(t){return i(t)||(c(e),t&&t.response&&(t.response.data=r(t.response.data,t.response.headers,e.transformResponse))),Promise.reject(t)})}},113:function(e,t,n){"use strict";var o=n(5);e.exports=function(e,t,n){return o.forEach(n,function(n){e=n(e,t)}),e}},114:function(e,t,n){"use strict";e.exports=function(e){return/^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(e)}},115:function(e,t,n){"use strict";e.exports=function(e,t){return t?e.replace(/\/+$/,"")+"/"+t.replace(/^\/+/,""):e}},116:function(e,t,n){"use strict";var o=n(58);function r(e){if("function"!=typeof e)throw new TypeError("executor must be a function.");var t;this.promise=new Promise(function(e){t=e});var n=this;e(function(e){n.reason||(n.reason=new o(e),t(n.reason))})}r.prototype.throwIfRequested=function(){if(this.reason)throw this.reason},r.source=function(){var e;return{token:new r(function(t){e=t}),cancel:e}},e.exports=r},117:function(e,t,n){"use strict";e.exports=function(e){return function(t){return e.apply(null,t)}}},118:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e};t.sendEvent=u,t.sendEventWithData=function(e,t,n){var r=location.pathname.split("/").filter(Boolean);r=r.length&&r[r.length-1]?r[r.length-1]:"";var i=document.querySelector("[data-affid]").dataset.affid,a=document.body.dataset.typeDevice;u(o({step:document.querySelector("[data-step]").dataset.step,affid:i,product_id:300},e,{payload:o({page_name:"/"+r,typeDevice:a},t)}),n)},t.getPlatform=function(){var e=navigator.platform,t=void 0;t=e.includes("Mac")?"Mac":e.includes("Win")?"Windows":e.includes("Android")||e.includes("Linux")?"Android":e.includes("iPhone")||e.includes("iPad")?"iOS":"Other";return t};var r,i=n(18),a=(r=i)&&r.__esModule?r:{default:r},s=n(28);function u(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(e){e.data.data.status&&console.log(e.data.data)},n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:function(e){console.warn(e)};"true"===(0,s.urlReader)("event-debug",!0)&&(e.debug=!0),(0,a.default)({method:"post",url:"/api/send-event",headers:{"X-CSRF-TOKEN":document.querySelector('meta[name="csrf-token"]').attributes.content.value},data:e}).then(t).catch(n)}},18:function(e,t,n){e.exports=n(99)},28:function(e,t,n){"use strict";function o(e){null!==e&&(e.style.display="none")}function r(e){if(null!==e){var t="block";e.dataset&&e.dataset.defaultDisplay&&(t=e.dataset.defaultDisplay),e.style.display=t}}Object.defineProperty(t,"__esModule",{value:!0}),t.ready=function(e){(document.attachEvent?"complete"===document.readyState:"loading"!==document.readyState)?e():document.addEventListener("DOMContentLoaded",e)},t.load=function(e){window.onload=e},t.addClass=function(e,t){null!==e&&(e.classList?e.classList.add(t):e.className+=" "+t)},t.removeClass=function(e,t){null!==e&&(e.classList?(t=t.split(" ")).forEach(function(t){e.classList.remove(t)}):e.className=e.className.replace(new RegExp("(^|\\b)"+t.split(" ").join("|")+"(\\b|$)","gi")," "))},t.html=function(e,t){null!==e&&(e.innerHTML=t)},t.hasClass=function(e,t){return null!==e&&(e.classList?e.classList.contains(t):new RegExp("(^| )"+t+"( |$)","gi").test(el.className))},t.hide=o,t.show=r,t.trigger=function(e,t){var n=document.createEvent("HTMLEvents");n.initEvent(t,!0,!1),e.dispatchEvent(n)},t.setCookie=function(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:604800,o=arguments[3],r=arguments[4],i=arguments[5],a=!(arguments.length>6&&void 0!==arguments[6])||arguments[6],s=void 0;if(n){var u=new Date;u.setTime(u.getTime()+1e3*n),s="; expires="+u.toGMTString()}else s="";document.cookie=e+"="+encodeURIComponent(t)+(s?"; expires="+s:"")+(o?"; path="+o:"")+(r?"; domain="+r:"")+(i?"; SameSite=Lax":"")+(a?"; secure":"")},t.getCookie=function(e){var t=" "+document.cookie,n=" "+e+"=",o=null,r=0,i=0;t.length>0&&-1!==(r=t.indexOf(n))&&(r+=n.length,-1===(i=t.indexOf(";",r))&&(i=t.length),o=decodeURIComponent(t.substring(r,i)));return o},t.urlReader=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t={},n=arguments.length>1&&void 0!==arguments[1]&&arguments[1]?location.search:sessionStorage.getItem("originalUrl")||"";n.length&&n.substr(1).split("&").forEach(function(e){/=/.test(e)?e.replace(/=/,function(n,o){t[e.substr(0,o)]=e.substr(o+1)}):t[e]=""});return e?t[e]?t[e]:null:t},t.fadeIn=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:300,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"ease";e&&(e.style.transition="all "+t+"ms "+n,e.style.opacity=0,r(e),e.style.opacity=1)},t.fadeOut=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:300,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"ease";e&&(e.style.opacity=1,e.style.transition="all "+t+"ms "+n,e.style.opacity=0,setTimeout(function(){o(e)},t+1))},t.triggerCustom=function(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=void 0;window.CustomEvent?o=new CustomEvent(t,{detail:n}):(o=document.createEvent("CustomEvent")).initCustomEvent(t,!0,!0,n);e.dispatchEvent(o)}},31:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o,r=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},i=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),a=n(18),s=(o=a)&&o.__esModule?o:{default:o},u=n(118),c=n(28);function l(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function d(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}Element.prototype.closest||(Element.prototype.matches||(Element.prototype.matches=Element.prototype.msMatchesSelector||Element.prototype.webkitMatchesSelector),Element.prototype.closest=function(e){var t=this;if(!document.documentElement.contains(this))return null;do{if(t.matches(e))return t;t=t.parentElement}while(null!==t);return null});var f=function(){function e(){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e);var n=location.pathname.split("/").filter(Boolean);this._pageName=n.length&&n[n.length-1]?decodeURI(n[n.length-1]):"",window.ty_template&&(this._pageName=window.ty_template),this.scrolls={25:!1,50:!1,75:!1},this.sendEventTimer=null,this.startTimeout=1e3,this.hiddenTabTimeout=3e4,this.startTime=Date.now(),window.$_GET=this._mapQuery(location.search.replace(/(\?)|(#.*(?=$|\?))/,"")),this._data={default:function(e){return{substep:e,bundleid:!1,uniqid:!0,payload:{page_name:"/"+t._pageName}}},scroll:function(e){return{substep:"scroll_"+e,bundleid:!1,uniqid:!0,payload:{page_name:"/"+t._pageName}}},session:function(){return{substep:"session_duration",bundleid:!1,payload:{page_name:"/"+t._pageName,time:((t.currentTime-t.startTime+1e3)/1e3).toFixed(2)}}},download:function(e){return{substep:"download_button",bundleid:!1,payload:{page_name:"/"+t._pageName,download_button:"download_button_"+(e.closest(".header")?"header":"body")}}},downloadLink:function(){return{substep:"download_link",bundleid:!1,payload:{page_name:"/"+t._pageName,typeDevice:t.typeDevice}}},downloadLinkWithPlatform:function(e){return{substep:e.dataset.substep,payload:{page_name:"/"+t._pageName,placement:e.dataset.placement,platform:(0,u.getPlatform)()}}},popup:function(e){return{substep:e,uniqid:!0,payload:{page_name:"/"+t._pageName}}},login:function(){return{substep:"log_in_account_click",payload:{page_name:"/"+t._pageName}}},learMore:function(){return{substep:"IDTGPromoBannerClick",payload:{page_name:"/"+t._pageName}}},closeIDTG:function(){return{substep:"IDTGPromoBannerClickClose",payload:{page_name:"/"+t._pageName}}},shownIDTG:function(){return{substep:"IDTGPromoBannerShown",payload:{page_name:"/"+t._pageName}}},getClarioClick:function(e){return{substep:e.dataset.substep,payload:{page_name:"/"+t._pageName,go_to:e.dataset.goto}}},getClarioClickPlacement:function(e){return{substep:e.dataset.substep,payload:{page_name:"/"+t._pageName,go_to:e.dataset.goto,placement:e.closest(".header")?"header":"body"}}},banner:function(e){return{substep:e,payload:{page_name:"/"+t._pageName}}}},this._boundScrollListener=function(e){return t._scrollListener(e)},this._boundUnbounceListener=function(e){return t._unbounceListener(e)},this._bindUnbounceEvent(),(0,c.ready)(function(){t._downloadButtons=[].concat(d(document.querySelectorAll(".js-download"))),t._downloadLinks=[].concat(d(document.querySelectorAll(".js-download-link"))),t._loginButton=[].concat(d(document.querySelectorAll(".js-login"))),t.typeDevice=document.body.dataset.typeDevice,t._popupBtn=[].concat(d(document.querySelectorAll(".js-tls-popup-btn"))),t._popupClose=[].concat(d(document.querySelectorAll(".js-tls-popup-close"))),t._tlsPopupOpen=document.querySelector("body").classList.contains("has-tls-popup")?[].concat(d(document.querySelectorAll(".js-buynow-link"))):[],t._stop3PopupOpen=document.querySelector("body").classList.contains("has-stop3-popup")?[].concat(d(document.querySelectorAll(".js-buynow-link, .js-download"))):[],t._bannerIDTG=document.querySelector(".js-new-tools__banner"),t._bannerGDPR=document.querySelector(".gdpr-banner__btn"),t._signupButton=[].concat(d(document.querySelectorAll(".js-signup-button"))),t._getClario=[].concat(d(document.querySelectorAll(".js-get-clario-link"))),t._downloadWithPlatformsLinks=[].concat(d(document.querySelectorAll(".js-download-clario-link"))),t._bindScrollEvents(),t._bindSessionEvent(),t._bindDownloadEvents(),t._bindDownloadLinks(),t._bindLoginEvents(),t._bindBannerIDTG(),t._bindBanners(),t._getClario&&t._bindGetClarioClick(),t._downloadWithPlatformsLinks&&t._bindDownloadWithPlatformsLinks(),t._bindSignUpButtonClick(),document.querySelector("body").classList.contains("has-stop3-popup")&&t._bindStop3PopupEvents(),document.querySelector("body").classList.contains("has-tls-popup")&&t._bindTlsPopupEvents(),t._bannerGDPR&&t._bindBannerGdpr()});var o=this;(0,c.load)(function(){o._bindViewEvent()})}return i(e,[{key:"sendEvent",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(e){e.data.data.status&&console.log(e.data.data)},n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:function(e){console.warn(e)};window.$_GET["event-debug"]&&(e.debug=!0),(0,s.default)({method:"post",url:"/api/send-event",headers:{"X-CSRF-TOKEN":document.querySelector('meta[name="csrf-token"]').attributes.content.value},data:r({step:document.querySelector("[data-step]").dataset.step},e)}).then(t).catch(n)}},{key:"sendBeacon",value:function(e){"function"==typeof navigator.sendBeacon?navigator.sendBeacon("/api/send-event",JSON.stringify(r({step:document.querySelector("[data-step]").dataset.step},e)))&&console.log(l({},e.substep,"send")):this.sendEvent(e)}},{key:"_mapQuery",value:function(e){if(e){var t={};return e.split("&").forEach(function(e){e=e.split("="),t[e[0]]=e[1]||""}),t}return""}},{key:"_bindViewEvent",value:function(){this.sendEvent(this._data.default("view"))}},{key:"_scrollListener",value:function(){var e=this,t=document.body.clientHeight,n=window.pageYOffset+window.innerHeight;return n/t>=.75?(["scroll","resize"].forEach(function(t){window.removeEventListener(t,e._boundScrollListener)}),this.scrolls[75]=!0,this.scrolls[50]=!0,this.scrolls[25]=!0,void this.sendEvent(this._data.scroll("75"))):n/t>=.5&&!this.scrolls[50]?(this.scrolls[50]=!0,this.scrolls[25]=!0,void this.sendEvent(this._data.scroll("50"))):void(n/t>=.25&&!this.scrolls[25]&&(this.scrolls[25]=!0,this.sendEvent(this._data.scroll("25"))))}},{key:"_bindScrollEvents",value:function(){var e=this;["scroll","resize"].forEach(function(t){window.addEventListener(t,e._boundScrollListener)})}},{key:"_unbounceListener",value:function(){this.sendBeacon(this._data.default("unbounce"))}},{key:"_bindUnbounceEvent",value:function(){window.addEventListener("unload",this._boundUnbounceListener,!1)}},{key:"_bindSessionEvent",value:function(){var e=this;"hidden"==document.visibilityState?window.addEventListener("visibilitychange",function(){e._sessionEvents()},{once:!0}):this._sessionEvents()}},{key:"_sessionEvents",value:function(){var e=this;setTimeout(function(){window.removeEventListener("unload",e._boundUnbounceListener,!1),e.startTime=Date.now()},this.startTimeout),window.addEventListener("unload",function(){e.currentTime=Date.now(),e.sendEventTimer||e.sendBeacon(e._data.session())},!1),window.addEventListener("visibilitychange",function(){document.hidden?(e.currentTime=Date.now(),e.timer=setTimeout(function(){e.sendEventTimer||(e.sendEvent(e._data.session()),e.sendEventTimer=!0)},e.hiddenTabTimeout)):clearTimeout(e.timer)})}},{key:"_bindDownloadEvents",value:function(){var e=this;this._downloadButtons.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.download(t))})})}},{key:"_bindDownloadLinks",value:function(){var e=this;this._downloadLinks.forEach(function(t){t.addEventListener("click",function(){setTimeout(function(){e.sendEvent(e._data.downloadLink())},1e3)})})}},{key:"_bindGetClarioClick",value:function(){var e=this;this._getClario.forEach(function(t){t.addEventListener("click",function(n){n.preventDefault();e.sendEvent(t.dataset.placement?e._data.getClarioClickPlacement(t):e._data.getClarioClick(t),window.location.assign(t.getAttribute("href")))})})}},{key:"_bindLoginEvents",value:function(){var e=this;this._loginButton.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.login())})})}},{key:"_bindTlsPopupEvents",value:function(){var e=this;this._popupBtn.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("TLS_popup_chat"))})}),this._popupClose.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("TLS_popup_closed"))})}),this._tlsPopupOpen.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("TLS_popup_view"))})})}},{key:"_bindStop3PopupEvents",value:function(){var e=this;this._popupBtn.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("PopupUpgradeOSBtn"))})}),this._popupClose.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("PopupUpgradeOSClosed"))})}),this._stop3PopupOpen.forEach(function(t){t.addEventListener("click",function(){e.sendEvent(e._data.popup("PopupUpgradeOSShown"))})})}},{key:"_bindBannerIDTG",value:function(){var e=this;this._bannerIDTG&&this._bannerIDTG.addEventListener("banner-showed",function(){e.sendEvent(e._data.shownIDTG()),e._bannerIDTG.addEventListener("click",function(t){var n=t.target;n.closest(".js-new-tools__close-btn")&&e.sendEvent(e._data.closeIDTG()),n.closest(".js-new-tools__link")&&e.sendEvent(e._data.learMore())})})}},{key:"_bindBannerGdpr",value:function(){var e=this;this._bannerGDPR.addEventListener("click",function(t){e.sendEvent(e._data.popup("Concent_Accept_All"))})}},{key:"_bindBanners",value:function(){var e=this;[].concat(d(document.querySelectorAll(".js-banner"))).forEach(function(t){var n=t.querySelector(".js-close"),o=t.closest(".js-popup");if(t.addEventListener("verification-success",function(){e.sendEvent(e._data.banner("SubscriptionFormSubscribeClick"))}),n&&n.addEventListener("click",function(){e.sendEvent(e._data.banner("SubscriptionFormCloseClick"))}),o)return o.querySelector(".js-close").addEventListener("click",function(){e.sendEvent(e._data.banner("SubscriptionFormOverlayCloseClick"))}),void t.addEventListener("popup-shown",function(){e.sendEvent(e._data.banner("SubscriptionFormShown"))});e.sendEvent(e._data.banner("SubscriptionFormShown"))})}},{key:"_bindSignUpButtonClick",value:function(){var e=this;this._signupButton.forEach(function(t){t.addEventListener("click",function(t){e.sendEvent(e._data.default(t.target.dataset.substep))})})}},{key:"_bindDownloadWithPlatformsLinks",value:function(){var e=this;this._downloadWithPlatformsLinks.forEach(function(t){t.addEventListener("click",function(n){n.preventDefault();e.sendEvent(e._data.downloadLinkWithPlatform(t),window.location.assign(t.getAttribute("href")))})})}}],[{key:"staticSendEvent",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(e){e.data.data.status&&console.log(e.data.data)},n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:function(e){console.warn(e)};window.$_GET["event-debug"]&&(e.debug=!0),(0,s.default)({method:"post",url:"/api/send-event",headers:{"X-CSRF-TOKEN":document.querySelector('meta[name="csrf-token"]').attributes.content.value},data:r({step:document.querySelector("[data-step]").dataset.step},e)}).then(t).catch(n)}},{key:"staticSendBeacon",value:function(t){"function"==typeof navigator.sendBeacon?navigator.sendBeacon("/api/send-event",JSON.stringify(r({step:document.querySelector("[data-step]").dataset.step},t)))&&console.log(l({},t.substep,"send")):e.staticSendEvent(t)}},{key:"getPageName",value:function(){var e=location.pathname.split("/").filter(Boolean);return e=e.length&&e[e.length-1]?decodeURI(e[e.length-1]):"",window.ty_template&&(e=window.ty_template),e}}]),e}();t.default=f},374:function(e,t,n){e.exports=n(375)},375:function(e,t,n){"use strict";var o,r=n(31);new((o=r)&&o.__esModule?o:{default:o}).default},43:function(e,t,n){"use strict";(function(t){var o=n(5),r=n(103),i={"Content-Type":"application/x-www-form-urlencoded"};function a(e,t){!o.isUndefined(e)&&o.isUndefined(e["Content-Type"])&&(e["Content-Type"]=t)}var s,u={adapter:("undefined"!=typeof XMLHttpRequest?s=n(55):void 0!==t&&(s=n(55)),s),transformRequest:[function(e,t){return r(t,"Content-Type"),o.isFormData(e)||o.isArrayBuffer(e)||o.isBuffer(e)||o.isStream(e)||o.isFile(e)||o.isBlob(e)?e:o.isArrayBufferView(e)?e.buffer:o.isURLSearchParams(e)?(a(t,"application/x-www-form-urlencoded;charset=utf-8"),e.toString()):o.isObject(e)?(a(t,"application/json;charset=utf-8"),JSON.stringify(e)):e}],transformResponse:[function(e){if("string"==typeof e)try{e=JSON.parse(e)}catch(e){}return e}],timeout:0,xsrfCookieName:"XSRF-TOKEN",xsrfHeaderName:"X-XSRF-TOKEN",maxContentLength:-1,validateStatus:function(e){return e>=200&&e<300}};u.headers={common:{Accept:"application/json, text/plain, */*"}},o.forEach(["delete","get","head"],function(e){u.headers[e]={}}),o.forEach(["post","put","patch"],function(e){u.headers[e]=o.merge(i)}),e.exports=u}).call(t,n(102))},5:function(e,t,n){"use strict";var o=n(54),r=n(100),i=Object.prototype.toString;function a(e){return"[object Array]"===i.call(e)}function s(e){return null!==e&&"object"==typeof e}function u(e){return"[object Function]"===i.call(e)}function c(e,t){if(null!==e&&void 0!==e)if("object"!=typeof e&&(e=[e]),a(e))for(var n=0,o=e.length;n<o;n++)t.call(null,e[n],n,e);else for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.call(null,e[r],r,e)}e.exports={isArray:a,isArrayBuffer:function(e){return"[object ArrayBuffer]"===i.call(e)},isBuffer:r,isFormData:function(e){return"undefined"!=typeof FormData&&e instanceof FormData},isArrayBufferView:function(e){return"undefined"!=typeof ArrayBuffer&&ArrayBuffer.isView?ArrayBuffer.isView(e):e&&e.buffer&&e.buffer instanceof ArrayBuffer},isString:function(e){return"string"==typeof e},isNumber:function(e){return"number"==typeof e},isObject:s,isUndefined:function(e){return void 0===e},isDate:function(e){return"[object Date]"===i.call(e)},isFile:function(e){return"[object File]"===i.call(e)},isBlob:function(e){return"[object Blob]"===i.call(e)},isFunction:u,isStream:function(e){return s(e)&&u(e.pipe)},isURLSearchParams:function(e){return"undefined"!=typeof URLSearchParams&&e instanceof URLSearchParams},isStandardBrowserEnv:function(){return("undefined"==typeof navigator||"ReactNative"!==navigator.product)&&"undefined"!=typeof window&&"undefined"!=typeof document},forEach:c,merge:function e(){var t={};function n(n,o){"object"==typeof t[o]&&"object"==typeof n?t[o]=e(t[o],n):t[o]=n}for(var o=0,r=arguments.length;o<r;o++)c(arguments[o],n);return t},extend:function(e,t,n){return c(t,function(t,r){e[r]=n&&"function"==typeof t?o(t,n):t}),e},trim:function(e){return e.replace(/^\s*/,"").replace(/\s*$/,"")}}},54:function(e,t,n){"use strict";e.exports=function(e,t){return function(){for(var n=new Array(arguments.length),o=0;o<n.length;o++)n[o]=arguments[o];return e.apply(t,n)}}},55:function(e,t,n){"use strict";var o=n(5),r=n(104),i=n(106),a=n(107),s=n(108),u=n(56),c="undefined"!=typeof window&&window.btoa&&window.btoa.bind(window)||n(109);e.exports=function(e){return new Promise(function(t,l){var d=e.data,f=e.headers;o.isFormData(d)&&delete f["Content-Type"];var p=new XMLHttpRequest,h="onreadystatechange",v=!1;if("undefined"==typeof window||!window.XDomainRequest||"withCredentials"in p||s(e.url)||(p=new window.XDomainRequest,h="onload",v=!0,p.onprogress=function(){},p.ontimeout=function(){}),e.auth){var m=e.auth.username||"",y=e.auth.password||"";f.Authorization="Basic "+c(m+":"+y)}if(p.open(e.method.toUpperCase(),i(e.url,e.params,e.paramsSerializer),!0),p.timeout=e.timeout,p[h]=function(){if(p&&(4===p.readyState||v)&&(0!==p.status||p.responseURL&&0===p.responseURL.indexOf("file:"))){var n="getAllResponseHeaders"in p?a(p.getAllResponseHeaders()):null,o={data:e.responseType&&"text"!==e.responseType?p.response:p.responseText,status:1223===p.status?204:p.status,statusText:1223===p.status?"No Content":p.statusText,headers:n,config:e,request:p};r(t,l,o),p=null}},p.onerror=function(){l(u("Network Error",e,null,p)),p=null},p.ontimeout=function(){l(u("timeout of "+e.timeout+"ms exceeded",e,"ECONNABORTED",p)),p=null},o.isStandardBrowserEnv()){var g=n(110),b=(e.withCredentials||s(e.url))&&e.xsrfCookieName?g.read(e.xsrfCookieName):void 0;b&&(f[e.xsrfHeaderName]=b)}if("setRequestHeader"in p&&o.forEach(f,function(e,t){void 0===d&&"content-type"===t.toLowerCase()?delete f[t]:p.setRequestHeader(t,e)}),e.withCredentials&&(p.withCredentials=!0),e.responseType)try{p.responseType=e.responseType}catch(t){if("json"!==e.responseType)throw t}"function"==typeof e.onDownloadProgress&&p.addEventListener("progress",e.onDownloadProgress),"function"==typeof e.onUploadProgress&&p.upload&&p.upload.addEventListener("progress",e.onUploadProgress),e.cancelToken&&e.cancelToken.promise.then(function(e){p&&(p.abort(),l(e),p=null)}),void 0===d&&(d=null),p.send(d)})}},56:function(e,t,n){"use strict";var o=n(105);e.exports=function(e,t,n,r,i){var a=new Error(e);return o(a,t,n,r,i)}},57:function(e,t,n){"use strict";e.exports=function(e){return!(!e||!e.__CANCEL__)}},58:function(e,t,n){"use strict";function o(e){this.message=e}o.prototype.toString=function(){return"Cancel"+(this.message?": "+this.message:"")},o.prototype.__CANCEL__=!0,e.exports=o},99:function(e,t,n){"use strict";var o=n(5),r=n(54),i=n(101),a=n(43);function s(e){var t=new i(e),n=r(i.prototype.request,t);return o.extend(n,i.prototype,t),o.extend(n,t),n}var u=s(a);u.Axios=i,u.create=function(e){return s(o.merge(a,e))},u.Cancel=n(58),u.CancelToken=n(116),u.isCancel=n(57),u.all=function(e){return Promise.all(e)},u.spread=n(117),e.exports=u,e.exports.default=u}});</script>
+
+        <link href="https://static-cdn.clario.co/blog/css/common.css" rel="stylesheet" type="text/css">
+
+        
+                    <!-- Google Tag Manager -->
+
+                <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+                {'gtm.start': new Date().getTime(),event:'gtm.js'}
+                );var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-W3BVPLJ');</script>
+
+            <!-- End Google Tag Manager -->
+    </head>
+    <body data-affid="580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb" data-step="Clario_blog" data-type-device="" data-env="prod">
+      <main class="page-layout">
+
+                 <div class="gdpr-banner js-gdpr-banner" data-placement="top" hidden>
+    <form class="gdpr-banner__container js-gdpr-banner-form" method="POST" action="https://clario.co/blog/api/gdpr/consent-tracking">
+        <div class="gdpr-banner__close js-gdpr-close-btn" data-event-name="Close"></div>
+        <input type="hidden" name="_token" value="hGuHd6qgal39ioYGM4RAdzr0KUPaX5zFmiiPTBDW">        <input name="tracking_id" hidden="hidden" value="db6512f">
+        <div class="gdpr-banner__text">
+            Hi there! We use cookies to give you the best online experience. For details, see our <a href="https://clario.co/cookie-policy/" class="gdpr-banner__link">Cookie Policy</a>.
+        </div>
+        <div class="gdpr-banner__controls">
+            <button class="gdpr-banner__button gdpr-banner__button_transparent" type="submit">Disagree</button>
+            <button class="gdpr-banner__button js-gdpr-close-btn" data-event-name="Accepted" type="button">Agree</button>
+        </div>
+    </form>
+</div>       
+        
+        <div class="header js-header header">
+    <div class="container header__container">
+        <div class="header__top">
+            <a href="https://clario.co/" class="header__logo"><svg class="icon" width="139" height="38" viewBox="0 0 139 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M114.353 8.39038C106.438 8.39038 100.015 14.813 100.015 22.7277C100.015 30.6425 106.438 37.0651 114.353 37.0651C122.267 37.0651 128.69 30.6425 128.69 22.7277C128.69 14.813 122.267 8.39038 114.353 8.39038ZM114.353 31.3777C109.703 31.3777 105.919 27.5068 105.919 22.7277C105.919 17.9486 109.682 14.0777 114.353 14.0777C119.024 14.0777 122.786 17.9486 122.786 22.7277C122.765 27.5068 119.002 31.3777 114.353 31.3777Z" fill="#151D51"/>
+<path d="M96.4692 8.823H90.5656V36.6543H96.4692V8.823Z" fill="#151D51"/>
+<path d="M14.0995 14.0994C17.4297 14.0994 20.0463 15.8726 21.1925 18.9434H27.4637C25.7986 12.4342 20.8681 8.39038 14.2292 8.39038C6.14149 8.39038 0 14.813 0 22.7494C0 30.6857 6.14149 37.0867 14.2292 37.0867C20.8681 37.0867 25.7986 33.0428 27.4637 26.5337H21.1925C20.0463 29.6045 17.4081 31.3777 14.0995 31.3777C9.27711 31.3777 5.92524 27.5068 5.92524 22.7277C5.92524 17.9486 9.27711 14.0994 14.0995 14.0994Z" fill="#151D51"/>
+<path d="M76.8119 12.9751V8.82308H70.9299V36.676H76.8119V24.5877C76.8119 17.4082 80.7477 13.3859 87.1919 14.7483V8.82308C83.1697 7.52558 78.65 9.83946 76.8119 12.9751Z" fill="#151D51"/>
+<path d="M36.7623 29.6262V0H30.8586V30.1884C30.8586 33.3241 32.221 36.6543 37.0218 36.6543H39.3573V31.9401H38.4923C37.3461 31.8319 36.7623 31.2913 36.7623 29.6262Z" fill="#151D51"/>
+<path d="M64.9183 29.6261V18.5757C64.9183 13.2127 61.9125 8.39038 53.6301 8.39038C47.0561 8.39038 42.7527 13.083 42.1905 17.6891H48.0509C48.6131 15.332 50.5377 13.4074 53.5652 13.4074C57.0901 13.4074 59.0147 15.2671 59.0147 17.6891C59.0147 18.619 58.5822 19.8084 56.6143 19.8084L51.9001 19.8949C45.2829 19.8949 41.2606 22.7926 41.2606 28.307C41.2606 33.3672 44.9585 37.1083 50.927 37.1083C54.5816 37.1083 57.4793 35.6378 59.5986 33.4321C60.3771 35.2702 62.0422 36.6758 65.1562 36.6758H67.1241V31.9616H66.6267C65.5022 31.8318 64.9183 31.2912 64.9183 29.6261ZM51.7703 32.0697C48.7429 32.0697 47.294 30.2965 47.294 28.4583C47.294 25.3876 49.8241 24.4793 52.657 24.4793L56.1818 24.4145C57.2415 24.4145 58.1713 24.2847 58.9931 23.9171V24.6523C59.0147 29.9072 55.3601 32.0697 51.7703 32.0697Z" fill="#151D51"/>
+<path class="white" d="M88.165 0.0217285C88.1217 0.259603 88.1217 0.519103 88.1217 0.778602C88.1217 3.78447 90.5437 6.20647 93.5496 6.20647C96.5554 6.20647 98.9774 3.78447 98.9774 0.778602C98.9774 0.519103 98.9558 0.259603 98.9342 0.0217285H88.165Z" fill="#5CD6C0"/>
+<path class="white" d="M138.227 36.676C138.27 36.4381 138.27 36.1786 138.27 35.9191C138.27 32.9132 135.848 30.4912 132.843 30.4912C129.837 30.4912 127.415 32.9132 127.415 35.9191C127.415 36.1786 127.436 36.4381 127.458 36.676H138.227Z" fill="#5CD6C0"/>
+</svg></a>
+            <a href="https://clario.co/blog/" class="header__blog-logo">blog</a>
+        </div>
+        <div class="header__wrap js-header-menu">
+            <div class="header__wrap_bg">
+                <div class="header__wrap-cont">
+                    <ul class="header__menu">
+                        <li class="header__menu-item header__menu-item_dropdown js-open-dropdown">
+                            <div class="header__menu-item_flex js-hover">
+                                <p class="header__menu-link header__menu-link_disp">Product.</p>
+                                <div class="header__menu-arrow js-dropdown-arrow"></div>
+                            </div>
+                            <ul class="header__menu-list js-dropdown">
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/cybersecurity-software/"
+                                       class="header__menu-link header__menu-link_size">Product overview</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/mobile-security/"
+                                       class="header__menu-link header__menu-link_size">Mobile
+                                        security</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/secure-browsing/"
+                                       class="header__menu-link header__menu-link_size">Clario on web</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/digital-security-experts/"
+                                       class="header__menu-link header__menu-link_size">Digital security experts</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/vpn/"
+                                       class="header__menu-link header__menu-link_size">Clario VPN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item js-add-index">
+                            <a href="https://clario.co/pricing-web?affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb" class="header__menu-link">Pricing.</a>
+                        </li>
+                        <li class="header__menu-item header__menu-item_dropdown js-open-dropdown">
+                            <div class="header__menu-item_flex js-hover">
+                                <p class="header__menu-link header__menu-link_disp">About.</p>
+                                <div class="header__menu-arrow js-dropdown-arrow"></div>
+                            </div>
+                            <ul class="header__menu-list header__menu-list_height js-dropdown">
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/about/" class="header__menu-link header__menu-link_size">About
+                                        us</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/faq/"
+                                       class="header__menu-link header__menu-link_size">FAQ</a>
+                                </li>
+                                <li class="header__menu-link header__menu-link_size">
+                                    <a href="https://clario.co/contacts/"
+                                       class="header__menu-link header__menu-link_size">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item header__menu-item_account">
+                            <a href="https://account.clario.co/login?affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb" class="header__menu-link js-account-btn">Log in.</a>
+                        </li>
+                        <a data-goto="download"
+                           data-substep="download_link"
+                           data-placement="header"
+                           href="https://dl.clario.co/download/bundle_id/300_0?affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb"
+                           class="header__download-button header__download-button_tablet header__download-button_menu text_bold js-btn-download js-download-clario-link"
+                        >
+                            Free Download
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <aside class="header__wrap-aside js-close-menu"></aside>
+        </div>
+
+        <a data-goto="download"
+           data-substep="download_link"
+           data-placement="header"
+           href="https://dl.clario.co/download/bundle_id/300_0?affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb"
+           class="header__download-button header__download-button_tablet text_bold js-download-clario-link js-btn-download">
+            Free Download
+        </a>
+
+        <div class="header__btn js-header-button">
+            <div class="header__btn-wrapper">
+                <span class="header__btn-line"></span>
+                <span class="header__btn-line"></span>
+                <span class="header__btn-line"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="post">
+        
+
+        <div class='container container_inner'>
+            <div class="post__main">
+                <div class="post__content js-post-content">
+                    <div class="post__block">
+                        <span class="post__block_title">Topic</span>
+                        <a href="https://clario.co/blog/digital-wellness/" class="post__item-category post__item-category_label posts__item-category_digital-wellness">Digital Wellness</a>
+                    </div>
+                    <h1 class="h2 post__title"> What Is Online Privacy? This Is Your Human Right</h1>
+                    <div class="post__info">
+  <div class="post__info_author post__author">
+    <div class="post__author_image" style="background-image: url('https://static-cdn.clario.co/blog-upload/images/d4b2e8ef47.jpg'), url('https://static-cdn.clario.co/blog/svg/new_baseline-account_circle-24px.svg')"></div>
+      <div class="post__author_wrap">
+          <p class="post__author_name">By <span class="bold">Olga Sushko</span></p>
+          <div class="post__description mobile">
+                                <span class="post__date-time">Jan 16, 2020</span>
+                  <span class="divider"></span>
+                            <div class="post__date-read">13 min read</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="post__description">
+          <span class="post__date-time">Jan 16, 2020</span>
+        <span class="divider"></span>
+    <div class="post__date-read">13 min read</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>                    <div class='ck ck-content js-content-sendable'>
+                        <p>Online privacy, also known as internet privacy or digital privacy, refers to how much of your personal, financial and browsing information remains private when you’re online.</p><p>&nbsp;</p><p>This has become a growing worry, with browsing history and personal data all potentially at risk when online.</p><p>&nbsp;</p><blockquote><p>Cybersecurity can be confusing sometimes. But luckily, Clario’s here to give you a worry-free digital experience. It's a completely new type of security app with built-in 24/7 support from live security experts. <a class="js-download-link" rel="noindex, nofollow" href="https://clario.co/download/instructions/?dwnld=true&affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb">Download Clario</a> and get ready for a better, safer digital life.</p></blockquote><p>&nbsp;</p><p>Many people underestimate the importance of online privacy, but they should be aware of how much information they’re sharing - not just on social networks, but just by browsing itself.</p><h2 id="h2_1"><strong>Why online privacy is so important</strong></h2><p>You should value data privacy online in the same way as the real world. So you have a confidential conversation behind closed doors or only share your financial details with a bank.</p><p>&nbsp;</p><p>It’s important to remember that nothing is free: whether it be downloading apps, using a company’s “free” email service (such as Gmail) or social networks like Facebook. Even visiting a website means you’re sharing data about yourself. And, as some people in your life know you better than others, online privacy exists on a spectrum: some online entities gather and store more information about you than other platforms.</p><p>&nbsp;</p><p>Online privacy is important for numerous reasons. You don’t want to share details of your personal life with strangers and it’s hard to be sure what personal information is gathered and by whom: information collected by one company might be shared with another.</p><p>&nbsp;</p><p>You might be uncomfortable with bespoke, targeted ads that remember your internet search history.</p><p>&nbsp;</p><p>Even more problematic is information sold from one company to another, or data gathered and shared without your consent. Ultimately, this is identity theft.</p><h2 id="h2_2"><strong>Public concern over internet privacy</strong></h2><p>In a recent <a href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/">poll of American internet users</a>, 81% said they believe they have no control over data collected by private companies. Worse - the number climbs to 84% when asked if they could control the government’s collection of their data.</p><h3 id="h3_1"><strong>GDPR</strong></h3><p>In the EU, concerns like these were addressed with GDPR (General Data Protection Regulation). This set of laws, passed in 2016 and implemented in 2018, was intended to protect the privacy and data of every EU citizen.</p><p>&nbsp;</p><p>There are 99 articles in GDPR. These include:</p><ul><li>the right to know what data a company holds about you</li><li>an opportunity to refuse a company access to browsing history and cookies when you visit their site</li><li>clear responsibility for companies to gain consent for customer information</li><li>stricter regulations regarding contacting customers and sharing contact details with third parties</li></ul><h3 id="h3_2"><strong>The right to be forgotten: data privacy as a human right</strong></h3><p>“The right to be forgotten” is a relatively new phrase, but it grows in relevance every time someone visits a site. Some tech companies have customer information dating back years, logging every site they visited, their preferences, shopping habits, political views and more.</p><p>&nbsp;</p><p>The right to be forgotten is the right to ask those companies to delete and surrender this information.</p><p>&nbsp;</p><p>This can extend to online chatter and third-party discussions: there have been cases where people have fought to have their names and images removed from “revenge porn” (and search engine results for same). Some have requested past personal stories (involving petty crime or embarrassing viral stories) be taken off the internet.</p><p>&nbsp;</p><p>This is an ongoing debate. On one side, the right to be forgotten arguably protects those who want privacy and not be reminded of previous mistakes. Those opposed (who, incidentally include some tech giants) argue that it amounts to censorship and could lead to the rewriting of history.</p><h2 id="h2_3"><strong>What is information privacy?</strong></h2><p>This is sometimes referred to as data privacy or online privacy.</p><p>&nbsp;</p><p>Information privacy is an element of online security that looks at the following issues:</p><ul><li>data acquired</li><li>how data is collected or stored</li><li>whether or not data is shared with a third party</li><li>regulatory restrictions, such as GDPR</li></ul><p>Many companies such as Google, Amazon and Facebook have profited handsomely in the “data economy”, - accumulating user data to maximise either product or ad sales. Good practice regarding information privacy means keeping customer information secure, not sharing it with third parties without consent or using data maliciously or negligently.</p><h3 id="h3_3"><strong>Personal privacy vs sensitive information</strong></h3><p>When it comes to internet privacy, there is personal and sensitive information. They are defined the following ways:</p><p>&nbsp;</p><p><strong>Personal information</strong> - identifiers, such as name, IP address, address, etc.</p><p>&nbsp;</p><p><strong>Sensitive information </strong>- very private data like medical records, but also information that you might not be ready to share publicly, such as your sexual orientation or political views.</p><h2 id="h2_4"><strong>How does privacy differ from information security?</strong></h2><p>Online privacy and security often overlap, as one sometimes affects the other. They can be differentiated this way.</p><p>&nbsp;</p><p><strong>Privacy</strong> - you want the company you deal with (say, a bank or a social network) to keep your data and information itself, not share it publicly or with third parties. In this instance, privacy is breached but security is maintained.</p><p>&nbsp;</p><p><strong>Security </strong>- this is the next step. If the data shared includes (for instance) financial information or your home address, then both <a href="https://cybernews.com/editorial/data-privacy-vs-data-security-whats-the-difference-and-why-you-should-care/" target="_blank" rel="noopener nofollow">privacy and security</a> is compromised.</p><h2 id="h2_5"><strong>The biggest internet privacy issues</strong></h2><p>As mentioned, internet-related privacy issues exist on a spectrum, from information you don’t mind sharing (say, a public social media account), to nuisance privacy compromises (targeted ads, for instance) to public embarrassment or breaches that affect your personal life (financial breaches or professional setbacks).</p><p>&nbsp;</p><p>Here are the online areas currently with the most discussion, risk and controversy...</p><h3 id="h3_4"><strong>Search engines user tracking</strong></h3><p>Search engines not only log what you’ve been looking for, but often what sites you subsequently visit. Additionally, if the search engine provider also makes the browser (Google Chrome, Firefox, Internet Explorer, etc.), they have your browsing history regardless of whether you searched for the site.</p><p>Search engines can (and do) collect:</p><ul><li>search history</li><li>cookies</li><li>IP addresses</li><li>click-through history</li></ul><p>Collectively, this information can be used for “profiling” - i.e., compositing a customer persona based on browsing, shopping, and social media preferences.</p><h3 id="h3_5"><strong>Social media data harvesting</strong></h3><p>Social media privacy hit the spotlight in recent years thanks to a string of scandals, including the Cambridge Analytica story (in which data was used to manipulate voters), cyber bullying and “doxing” (sharing private information publicly).</p><p>&nbsp;</p><p>Additionally, some major social networks sites have had data breaches, leaving millions of users exposed.</p><p>&nbsp;</p><p>Victims of data and privacy breaches are not to blame, and we will be talking about how best to protect your privacy online later. But there is an adage when it comes to social networking: don’t say anything online that you wouldn’t like repeated to your parents or employer!</p><h3 id="h3_6"><strong>Cookies/online tracking</strong></h3><p>For the most part, cookies are harmless. They are code that tell a website information on your browsing history, which in turn can help the user by remembering:</p><ul><li>logins</li><li>identification</li><li>preference settings</li><li>ad settings</li><li>language settings</li></ul><p>Cookies can become a concern when third-party ad serving is involved. When you visit a site, your browser has assembled information from various sources that dictates the ads you see. You have, essentially, become a profile/persona, even if it’s only seen by bots.</p><p>&nbsp;</p><p>This has been questioned by privacy advocacy groups, as companies like Google amass vast amounts of consumer data to deliver personalised ads based on browser history.</p><h3 id="h3_7"><strong>Mobile apps and privacy</strong></h3><p>We all have apps on our phones. In fact, the average smartphone owner is using <a href="https://techcrunch.com/2017/05/04/report-smartphone-owners-are-using-9-apps-per-day-30-per-month/">9 apps per day and 30 per month</a>. We know our favourite apps and how they make our lives easier - but they know even more about us.</p><p>&nbsp;</p><p>Many apps request location details (which makes sense if it’s, for example, a taxi app), usernames and email addresses.</p><p>&nbsp;</p><p>The next level of information is “risky permission”. This means information that would be risky if it fell into the wrong hands including access to a phone’s microphone/recorder, camera and contacts.</p><p>&nbsp;</p><p>A good rule of thumb is to consider whether you trust the app provider/company to hold this information. If there’s anything you feel uncomfortable with, you can deny access, either instantaneously or in the app’s settings.</p><h3 id="h3_8"><strong>Identity theft</strong></h3><p>Identity theft has been a crime since long before the internet, but new technology has opened up fresh avenues for con artists and thieves.</p><p>&nbsp;</p><p>Online identity theft happens when someone accesses your personally identifiable information (PII) to commit fraud. This information might be a driver’s license, bank account details, tax numbers, or anything else required to impersonate you online.</p><p>&nbsp;</p><p>In the worst-case scenario, your information might end up for sale on the dark web.</p><p>&nbsp;</p><p>They source this information often by the following means:</p><ul><li><strong>phishing</strong>: criminals pose as reputable contacts such as financial institutions to trick you into surrendering sensitive information or opening malicious attachments</li><li><strong>malware</strong>: malicious software that can access your computer’s operating system</li><li><strong>pharming</strong>: hijacking information using a virus without your knowledge, often through a fake site</li><li><strong>discarded computers and phones</strong>: make sure any device you get rid of is thoroughly scrubbed before you sell it or give it away</li></ul><h2 id="h2_6"><strong>Our top tips to help you protect your privacy online</strong></h2><p>It’s easy to feel despondent when you read about online security threats, but there are simple steps you can take to greatly reduce the risk of online fraud.</p><p>&nbsp;</p><p>Here’s what we recommend…</p><p>&nbsp;</p><p><strong>1. Use DNT setting</strong></p><p>&nbsp;</p><p>DNT stands for “do not track” and you can change DNT settings on your online browsers. When you enable it in your browsing (be if Chrome, Firefox, or another browser), you are telling websites and third party partners that you do not want to be tracked.</p><p>&nbsp;</p><p><strong>2. Use cookie-blocking browser extensions</strong></p><p>&nbsp;</p><p>There are cookie-blocking browser extensions available which will help keep tracking and especially third-party information gathering, at bay.</p><p>&nbsp;</p><p><strong>3. Opt out of app tracking</strong></p><p>&nbsp;</p><p>As mentioned above, apps have access to a lot of information about you. But you can prevent this by going to your app settings (either within the app or in your phone settings) and opting out of the app tracking information, including location.</p><p>&nbsp;</p><p><strong>4. Review privacy policies carefully</strong></p><p>&nbsp;</p><p>A common mistake when it comes to online browsing is to simply click “agree” to user agreements and privacy policies without reading them. We’d advise you to take a look at any document before clicking “agree” or “accept”.</p><p>&nbsp;</p><p>If you don’t have time to read it (and some user agreements are hundreds of pages long), research what the app or site asks of its users and whether you’re comfortable with what they know about users.</p><p>&nbsp;</p><p><strong>5. Access the internet via VPN</strong></p><p>&nbsp;</p><p>A VPN (virtual private network) routes your online activity through an encrypted virtual tunnel. This keeps your IP address and location secret from sites you visit; it protects you from hackers; and in some cases, it can give you access to some sites and services unavailable in your country.</p><p>&nbsp;</p><p><strong>6. Browse in incognito mode</strong></p><p>&nbsp;</p><p>When browsing online, you have the option of choosing “incognito” mode. Also known as “private browsing”, it means that your online history isn’t stored or remembered.</p><p>&nbsp;</p><p><strong>7. Use a different search engine</strong></p><p>&nbsp;</p><p>If you’re concerned about what a search engine knows, it might be an idea to change engines, even if you only do it occasionally. DuckDuckGo, for instance, markets itself as a more private and secure alternative to Google.</p><p>&nbsp;</p><p><strong>8. Be wary of what you click online</strong></p><p>&nbsp;</p><p>Phishing (sourcing your sensitive data when you go online) depends on you clicking on certain risky sites. So, tread carefully online and do not click on anything remotely suspicious. Don’t forget, some phishing threats pose as ads.</p><p>&nbsp;</p><p><strong>9. Secure your devices and use antivirus software</strong></p><p>&nbsp;</p><p>Finally, you should definitely have up to date, industry-leading antivirus software on your device, whether it’s mobile or a computer. Run it regularly and carry out frequent scans.</p><h2 id="h2_7"><strong>Clario - the online security experts</strong></h2><p>We are <a href="https://clario.co/">visionaries in online security for consumers</a>. That might sound a little bold, but it's something we’re passionate about and we want to make things better. Don’t hesitate to get in touch if there’s anything else you’d like to know about privacy, security, or any online issues.</p>
+                    </div>
+                                                            
+                    
+                    
+                    <div class="post__share-bottom">
+                        <div class="wrapper">
+                            <div class="post__info">
+  <div class="post__info_author post__author">
+    <div class="post__author_image" style="background-image: url('https://static-cdn.clario.co/blog-upload/images/d4b2e8ef47.jpg'), url('https://static-cdn.clario.co/blog/svg/new_baseline-account_circle-24px.svg')"></div>
+      <div class="post__author_wrap">
+          <p class="post__author_name">By <span class="bold">Olga Sushko</span></p>
+          <div class="post__description mobile">
+                                <span class="post__date-time">Jan 16, 2020</span>
+                  <span class="divider"></span>
+                            <div class="post__date-read">13 min read</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="post__description">
+          <span class="post__date-time">Jan 16, 2020</span>
+        <span class="divider"></span>
+    <div class="post__date-read">13 min read</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>                            <p class="author__bio">
+                                Privacy and cybersecurity advocate. Mac lover with a passion for copywriting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <div class='container container_inner'>
+        <div class="post__related">
+            <p class="post__related-title">Keep reading</p>
+            <div class="posts keepReading">
+            <a class="posts__item" href="https://clario.co/blog/clario-at-ces-2020/">
+            <img class="posts__item-image" src="https://static-cdn.clario.co/blog-upload/images/6906a6ee97.png" title="Clario at CES: A Game-Changing Lifestyle Cybersecurity Solution" alt="Clario at CES: A Game-Changing Lifestyle Cybersecurity Solution">
+                            <p class="posts__item-category posts__item-category_label posts__item-category_columns">Clario News</p>
+                        <p class="posts__item-title">Clario at CES: A Game-Changing Lifestyle Cybersecurity Solution</p>
+        </a>
+            <a class="posts__item" href="https://clario.co/blog/what-to-do-if-your-identity-is-stolen/">
+            <img class="posts__item-image" src="https://static-cdn.clario.co/blog-upload/images/238d7c1e9f.png" title="What to Do If Your Identity Has Been Stolen? " alt="What to Do If Your Identity Has Been Stolen? ">
+                            <p class="posts__item-category posts__item-category_label posts__item-category_columns">Data Protection</p>
+                        <p class="posts__item-title">What to Do If Your Identity Has Been Stolen? </p>
+        </a>
+            <a class="posts__item" href="https://clario.co/blog/what-is-cyber-security/">
+            <img class="posts__item-image" src="https://static-cdn.clario.co/blog-upload/images/9e5e5c9ca6.png" title="What Is Cybersecurity And Why Is It Important?" alt="What Is Cybersecurity And Why Is It Important?">
+                            <p class="posts__item-category posts__item-category_label posts__item-category_columns">Digital Wellness</p>
+                        <p class="posts__item-title">What Is Cybersecurity And Why Is It Important?</p>
+        </a>
+    </div>        </div>
+            </div>
+    </div>
+    <div class='js-scroll-to-top post__scroll-to-top'></div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="catfish-banner js-catfish-banner">
+    <div class="catfish-banner__wrapper">
+        <a class="catfish-banner__wrapper_cross js-catfish-cross"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.00001L6 18" stroke="#151D51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.00001 6.00001L18 18" stroke="#151D51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+        <p class="catfish-banner__wrapper_text js-catfish-txt">Are you fully secured online? Get Clario for an all-round protection.</p>
+                    <a href="https://dl.clario.co/download/bundle_id/300_0?affid=580c8000-f056-11eb-9b8c-bb0d38c75a00-mzb"
+               class="catfish-banner__wrapper_btn js-catfish-btn js-btn-download btn"
+               data-substep="CatfishBannerClick">
+                <span class="btn__text_bold ">Get secured</span>
+            </a>
+            </div>
+</div>    
+    <script type="text/template" id="balloon">
+        <a class="post__balloon-social post__balloon-twitter js-share-twitter"
+           rel="noopeners nofollow noreferrer" target="_blank"
+           href="https://twitter.com/intent/tweet?text=%E2%80%9C{%text%}%E2%80%9D&url={%link_encoded%}"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blog-Topic-Desktop-HD" transform="translate(-485.000000, -855.000000)">
+            <g id="Group-15" transform="translate(485.000000, 855.000000)">
+                <circle id="Oval-2-Copy" fill="#F1F3F5" cx="18" cy="18" r="18" class="circle"></circle>
+                <path class="path" d="M15.6384,26.4 C22.88352,26.4 26.8464,20.3975618 26.8464,15.1928248 C26.8464,15.0219574 26.8464,14.8520499 26.83488,14.6831023 C27.60576,14.1263433 28.27104,13.4351942 28.8,12.6442124 C28.08192,12.9629089 27.31872,13.1721735 26.53824,13.2643268 C27.36,12.771883 27.97536,11.9981799 28.27008,11.0852871 C27.49632,11.5441334 26.65056,11.8676295 25.76832,12.0413768 C24.27648,10.4555735 21.78144,10.3787791 20.19456,11.8705093 C19.17216,12.8323585 18.73728,14.266493 19.05504,15.6343923 C15.888,15.4750441 12.93696,13.9794741 10.93632,11.5191752 C9.89088,13.3190427 10.4256,15.6209533 12.15648,16.7767083 C11.5296,16.7584696 10.91616,16.589522 10.368,16.2842645 L10.368,16.3341808 C10.36896,18.2089228 11.69088,19.823524 13.52832,20.1950167 C12.94848,20.353405 12.33984,20.3764433 11.7504,20.2622117 C12.26592,21.8672136 13.74528,22.9663327 15.43008,22.9980104 C14.0352,24.0942497 12.312,24.6894059 10.53792,24.687486 C10.22496,24.6865261 9.912,24.6682875 9.6,24.6308502 C11.40192,25.7866051 13.4976,26.4 15.6384,26.3971202" id="twitter-[#154]" fill="#B4C2CD"></path>
+            </g>
+        </g>
+    </g>
+</svg></a>
+        <a class="post__balloon-social post__balloon-facebook js-share-facebook"
+           rel="noopener nofollow noreferrer" target="_blank"
+           href="https://www.facebook.com/sharer/sharer.php?quote={%text%}&u={%link_encoded%}"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blog-Desktop-HD" transform="translate(-1308.000000, -503.000000)">
+            <g id="Group-15" transform="translate(1263.000000, 503.000000)">
+                <g id="Group-13-Copy-2" transform="translate(45.000000, 0.000000)">
+                    <circle class="circle" id="Oval-2" fill="#F1F3F5" cx="18" cy="18" r="18"></circle>
+                    <path class="path" d="M19.1298772,26.4 L19.1298772,18.84 L21.4251023,18.84 L21.8,15.48 L19.1298772,15.48 L19.1298772,13.84368 C19.1298772,12.97848 19.1519782,12.12 20.3609823,12.12 L21.5855389,12.12 L21.5855389,9.7176 C21.5855389,9.68148 20.5336971,9.6 19.4695771,9.6 C17.2472033,9.6 15.8556617,10.99188 15.8556617,13.548 L15.8556617,15.48 L13.4,15.48 L13.4,18.84 L15.8556617,18.84 L15.8556617,26.4 L19.1298772,26.4 Z" id="facebook-[#176]" fill="#B4C2CD"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+        <a class="post__balloon-social post__balloon-messenger js-share-messenger"
+           rel="noopener nofollow noreferrer" target="_blank"
+           href="http://www.facebook.com/dialog/send?app_id={%appid%}&link={%link%}&redirect_uri={%link%}"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <path d="M15,0 C6.71571429,0 0,6.26598214 0,13.9955357 L0,13.9955357 C0,18.3723214 2.1534375,22.2804911 5.52522321,24.8464286 L5.52522321,24.8464286 L5.52522321,30.2303571 L10.5594643,27.3683036 C11.9626339,27.7727679 13.4544643,27.9910714 15,27.9910714 L15,27.9910714 C23.2848214,27.9910714 30,21.7245536 30,13.9955357 L30,13.9955357 C30,6.26598214 23.2848214,0 15,0 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blog-Topic-Desktop-HD" transform="translate(-641.000000, -1130.000000)">
+            <g id="Group-6" transform="translate(641.000000, 1130.232143)">
+                <g id="Fill-1">
+                    <use class="circle" fill="#A0ADC9" xlink:href="#path-2"></use>
+                </g>
+                <polygon class="path" id="Fill-4" fill="#FFFFFF" points="13.3982143 10.1622187 5.30879464 18.7272187 12.6708482 14.687933 16.5174107 18.7272187 24.5611607 10.1622187 17.2808036 14.1307902"></polygon>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    </script>
+
+        <footer class="footer-section">
+    <div class="container footer__container">
+                <a href="https://clario.co/" >
+            <img src="https://static-cdn.clario.co/blog/images/tags/footer-logo@2x.png" class="icon" title="Clario Tech, Clario Cybersecurity, Clario Software, We Are Clario" alt="Clario Tech, Clario Cybersecurity, Clario Software, We Are Clario">
+        </a>
+        <ul class="footer__menu">
+            <li class="footer__menu-item footer__menu-item_width">
+                <a href="https://clario.co/privacy-policy/" class="footer__menu-link ">Privacy Policy</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="https://clario.co/cookie-policy/"  class="footer__menu-link">Cookie Policy</a>
+            </li>
+            <li class="footer__menu-item footer__menu-item_width">
+                <a href="https://clario.co/eula/" class="footer__menu-link">EULA</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="https://clario.co/privacy-notice/" class="footer__menu-link">Privacy Notice</a>
+            </li>
+            <li class="footer__menu-item footer__menu-item_width">
+                <a href="https://clario.co/terms-and-conditions/"  class="footer__menu-link">Terms and Conditions</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="https://clario.co/refund-policy/"  class="footer__menu-link">Refund Policy</a>
+            </li>
+        </ul>
+        <div class="footer__copyright">
+            <p class="footer__copyright-text">© 2021 Clario Tech DMCC.</p>
+            <p class="footer__copyright-text">All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+        <div class="popup-form js-popupForm close">
+  <div class="popup-form__wrap">
+    <div class="popup-form__close close">
+    </div>
+    <h2 class="popup-form__title">We’d like to stay in touch.</h2>
+    <p class="popup-form__description">
+      We’ve got something special to share! Enter your contact details below to be among the first to find out about the
+      exciting changes we’ve got in the works as well as to receive special promotions.
+    </p>
+    <form class="subscription js-subscription js-popup-form" method="POST" action="https://clario.co/blog/api/send-to-ne"
+          data-sitekey="6Lea98MUAAAAAFvoRmmFt678CbHVX9oBT2xZ68rF">
+      <div class="input_wrapper subscription__email subscription__email_name">
+        <input type="text" name="name" id="name" placeholder="What shall we call you?">
+      </div>
+
+      
+      <div class="input_wrapper subscription__email">
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+      </div>
+      <label class="agree">
+        <input type="checkbox" class="checkbox js-checkbox" id="checkbox"
+               name="checkbox_privacy"/>
+        <span class="agree__checkbox"></span>
+        <p class="agree__desc">I agree to receive news, updates, and marketing offers. Read more in <a
+            href="https://clario.co/cookie-policy/" class="text__link" target="_blank"> Privacy Notice</a>.</p>
+      </label>
+      <p class="message js-message-agree"></p>
+      <div class="subscription__recaptcha-badge">
+        This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy" class="text__link" target="_blank">Privacy Policy</a>
+        and <a href="https://policies.google.com/terms" class="text__link" target="_blank">Terms of Service</a> apply.
+        <span class="subscription__recaptcha-error"> ReCaptcha verification failed </span>
+      </div>
+      <button class="subscription__btn text_bold">Let’s go together!</button>
+    </form>
+  </div>
+</div>
+<div class="successPopup js-popup-success js-popup" style="display: none">
+  <div class="popup js-popup-wrapper">
+    <div class="popup__content">
+        <span class="popup__close js-cross"></span>
+        <h3 class="popup__title title_bold">Thanks for your subscription!</h3>
+        <p class="popup__desc text">You’ll be the first to know about our updates. Please keep an eye on your mailbox.</p>
+    </div>
+</div></div>
+
+<div class="errorPopup js-popup-error js-popup" style="display: none">
+  <div class="popup js-popup-wrapper">
+    <div class="popup__content">
+        <span class="popup__close js-cross"></span>
+        <h3 class="popup__title title_bold">Connection error, please reload the page!</h3>
+        <p class="popup__desc text"></p>
+    </div>
+</div></div>      </main>
+
+
+      <section class="popup-mobile js-popup-mobile-wrapper js-popup-mobile-wrapper-close">
+    <div class="popup-mobile__overlay js-popup-mobile-close"></div>
+    <div class="popup-mobile__wrapper -leave-email js-popup-mobile">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg class="popup-mobile__cross js-popup-mobile-close" width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1920x880-copy" transform="translate(-488.000000, -1173.000000)" stroke="#AAAAAA" stroke-width="2">
+            <g id="popup-copy-7" transform="translate(456.000000, 1131.000000)">
+                <g id="Line-Copy" transform="translate(32.000000, 42.000000)">
+                    <path d="M-2.93444851,10.770882 L24.1237644,10.7552827" transform="translate(10.594658, 10.763082) rotate(45.000000) translate(-10.594658, -10.763082) "></path>
+                    <path d="M-2.93444851,10.770882 L24.1237644,10.7552827" id="Line-Copy-2" transform="translate(10.594658, 10.763082) scale(-1, 1) rotate(45.000000) translate(-10.594658, -10.763082) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>        <h2 class="popup-mobile__title">Your phone is powerful, but it’s not a Mac</h2>
+        <p class="popup-mobile__desc">We’ll email you a link to MacKeeper, so you can download it when you’re on your Mac.</p>
+        <form action="https://api-ne.mackeeper.com/mk-site/subscribe" class="popup-mobile__form js-popup-mobile-form" id="form" method="post">
+            <!-- ---------------------------------------------------------------------- -->
+            <label class="popup-mobile__email-label js-popup-mobile-form-input" for="popup-mobile-email">
+                <input
+                    class="popup-mobile__email-input js-popup-mobile-form-input-inner js-popup-mobile-form-input-email"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email*"
+                    maxlength="80"
+                    required/>
+                <span class="popup-mobile__email-error -invalid">Enter a valid email address</span>
+                <span class="popup-mobile__email-error -empty">Email required to subscribe</span>
+            </label>
+            <input type="text" value="site-mobile" hidden  name="initial_subscribe_source" id="initial_subscribe_source">
+            <input type="checkbox" name="enable_marketing_emails" hidden checked>
+            <div class="popup-mobile__hack">
+                <label for="enable_service_emails" class="popup-mobile__checkbox-label">
+                    <input class="popup-mobile__checkbox js-popup-mobile-form-checkbox" type="checkbox" id="enable_service_emails" name="enable_service_emails" required value="true">
+                    <i class="popup-mobile__checkmark"></i>
+                    <span class="popup-mobile__agree">By clicking “Submit”, you agree to get your download link via email.</span>
+                </label>
+                <button class="popup-mobile__btn js-popup-mobile-form-submit" type="submit" value="Submit" disabled>Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup-mobile__wrapper -success js-popup-mobile-success">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg class="popup-mobile__cross js-popup-mobile-success-close" width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1920x880-copy" transform="translate(-488.000000, -1173.000000)" stroke="#AAAAAA" stroke-width="2">
+            <g id="popup-copy-7" transform="translate(456.000000, 1131.000000)">
+                <g id="Line-Copy" transform="translate(32.000000, 42.000000)">
+                    <path d="M-2.93444851,10.770882 L24.1237644,10.7552827" transform="translate(10.594658, 10.763082) rotate(45.000000) translate(-10.594658, -10.763082) "></path>
+                    <path d="M-2.93444851,10.770882 L24.1237644,10.7552827" id="Line-Copy-2" transform="translate(10.594658, 10.763082) scale(-1, 1) rotate(45.000000) translate(-10.594658, -10.763082) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>        <h3 class="popup-mobile__title contact-form__title_center">Check your email on your Mac</h3>
+        <h3 class="popup-mobile__subtitle contact-form__title_center">Install MacKeeper on your Mac computer to rediscover its true power.</h3>
+    </div>
+</section>
+      <div class="onscreen js-onscreen">
+    <div class="post-instruction  safari">
+        <div class="logo"><svg class="logo__icon" width="139" height="38" viewBox="0 0 139 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M114.353 8.39038C106.438 8.39038 100.015 14.813 100.015 22.7277C100.015 30.6425 106.438 37.0651 114.353 37.0651C122.267 37.0651 128.69 30.6425 128.69 22.7277C128.69 14.813 122.267 8.39038 114.353 8.39038ZM114.353 31.3777C109.703 31.3777 105.919 27.5068 105.919 22.7277C105.919 17.9486 109.682 14.0777 114.353 14.0777C119.024 14.0777 122.786 17.9486 122.786 22.7277C122.765 27.5068 119.002 31.3777 114.353 31.3777Z" fill="#151D51"/>
+<path d="M96.4692 8.823H90.5656V36.6543H96.4692V8.823Z" fill="#151D51"/>
+<path d="M14.0995 14.0994C17.4297 14.0994 20.0463 15.8726 21.1925 18.9434H27.4637C25.7986 12.4342 20.8681 8.39038 14.2292 8.39038C6.14149 8.39038 0 14.813 0 22.7494C0 30.6857 6.14149 37.0867 14.2292 37.0867C20.8681 37.0867 25.7986 33.0428 27.4637 26.5337H21.1925C20.0463 29.6045 17.4081 31.3777 14.0995 31.3777C9.27711 31.3777 5.92524 27.5068 5.92524 22.7277C5.92524 17.9486 9.27711 14.0994 14.0995 14.0994Z" fill="#151D51"/>
+<path d="M76.8119 12.9751V8.82308H70.9299V36.676H76.8119V24.5877C76.8119 17.4082 80.7477 13.3859 87.1919 14.7483V8.82308C83.1697 7.52558 78.65 9.83946 76.8119 12.9751Z" fill="#151D51"/>
+<path d="M36.7623 29.6262V0H30.8586V30.1884C30.8586 33.3241 32.221 36.6543 37.0218 36.6543H39.3573V31.9401H38.4923C37.3461 31.8319 36.7623 31.2913 36.7623 29.6262Z" fill="#151D51"/>
+<path d="M64.9183 29.6261V18.5757C64.9183 13.2127 61.9125 8.39038 53.6301 8.39038C47.0561 8.39038 42.7527 13.083 42.1905 17.6891H48.0509C48.6131 15.332 50.5377 13.4074 53.5652 13.4074C57.0901 13.4074 59.0147 15.2671 59.0147 17.6891C59.0147 18.619 58.5822 19.8084 56.6143 19.8084L51.9001 19.8949C45.2829 19.8949 41.2606 22.7926 41.2606 28.307C41.2606 33.3672 44.9585 37.1083 50.927 37.1083C54.5816 37.1083 57.4793 35.6378 59.5986 33.4321C60.3771 35.2702 62.0422 36.6758 65.1562 36.6758H67.1241V31.9616H66.6267C65.5022 31.8318 64.9183 31.2912 64.9183 29.6261ZM51.7703 32.0697C48.7429 32.0697 47.294 30.2965 47.294 28.4583C47.294 25.3876 49.8241 24.4793 52.657 24.4793L56.1818 24.4145C57.2415 24.4145 58.1713 24.2847 58.9931 23.9171V24.6523C59.0147 29.9072 55.3601 32.0697 51.7703 32.0697Z" fill="#151D51"/>
+<path class="white" d="M88.165 0.0217285C88.1217 0.259603 88.1217 0.519103 88.1217 0.778602C88.1217 3.78447 90.5437 6.20647 93.5496 6.20647C96.5554 6.20647 98.9774 3.78447 98.9774 0.778602C98.9774 0.519103 98.9558 0.259603 98.9342 0.0217285H88.165Z" fill="#5CD6C0"/>
+<path class="white" d="M138.227 36.676C138.27 36.4381 138.27 36.1786 138.27 35.9191C138.27 32.9132 135.848 30.4912 132.843 30.4912C129.837 30.4912 127.415 32.9132 127.415 35.9191C127.415 36.1786 127.436 36.4381 127.458 36.676H138.227Z" fill="#5CD6C0"/>
+</svg></div>
+        <div class="desc text_bold">
+            Click here to start installing
+        </div>
+    </div>
+</div>
+      <script src="https://static-cdn.clario.co/blog/js/common.js" type="text/javascript"></script>
+      
+      <div class="onscreen js-onscreen safari">
+    <img data-src="https://static-cdn.clario.co/blog/images/onscreen/arrow.png" alt="arrow" class="onscreen__arrow" />
+    <div class="onscreen__to-do">
+        <div class="onscreen__step onscreen__step_1">
+            <h4 class="onscreen__title" data-count="1">Run Application</h4>
+            <picture class="onscreen__screen onscreen__screen_1">
+                <source data-srcset="https://static-cdn.clario.co/blog/images/onscreen/safari_1_en@2x.jpg 2x, https://static-cdn.clario.co/blog/images/onscreen/safari_1_en.jpg 1x" />
+                <img data-src="https://static-cdn.clario.co/blog/images/onscreen/safari_1_en.jpg" />
+            </picture>
+        </div>
+        <div class="onscreen__step onscreen__step_2">
+            <h4 class="onscreen__title" data-count="2">Double-Click on MacKeeper.pkg</h4>
+            <picture class="onscreen__screen onscreen__screen_2">
+                <source data-srcset="https://static-cdn.clario.co/blog/images/onscreen/safari_2_en@2x.jpg 2x, https://static-cdn.clario.co/blog/images/onscreen/safari_2_en.jpg 1x" />
+                <img data-src="https://static-cdn.clario.co/blog/images/onscreen/safari_2_en.jpg" />
+            </picture>
+        </div>
+        <div class="onscreen__step onscreen__step_3">
+            <picture class="onscreen__screen onscreen__screen_3">
+                <source data-srcset="https://static-cdn.clario.co/blog/images/onscreen/safari_3_en@2x.jpg 2x, https://static-cdn.clario.co/blog/images/onscreen/safari_3_en.jpg 1x" />
+                <img data-src="https://static-cdn.clario.co/blog/images/onscreen/safari_3_en.jpg" />
+            </picture>
+            <h4 class="onscreen__title" data-count="3">Click Continue</h4>
+        </div>
+    </div>
+</div>    </body>
+</html>
